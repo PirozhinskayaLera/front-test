@@ -202,3 +202,40 @@ img {
 	font-size: 53px;
 	line-height: 53px;
 }
+.maximum {
+	padding-bottom: 120px;
+	padding-top: 120px;
+}
+
+.maximum h2 {
+	font-size: 60px;
+	font-weight: 300;
+	margin-bottom: 80px;
+	text-transform: uppercase;
+	color: #211041;
+}
+
+.maximum__advantages {
+	display: flex; 
+	flex-direction: row;
+}
+
+.maximum__advantages-item {
+	width: 365px;
+	display: flex;
+	flex-direction: column;
+	padding: 40px 20px;
+	border: 1px solid #D1C6DD;
+	margin-right: 20px;
+}
+.maximum__advantages-item img {
+	width: 84px;
+	height: 84px;
+	margin-bottom: 40px;
+}
+
+.maximum__advantages-item-title{
+	font-size: 20px;
+	font-weight: 600;
+	margin-bottom: 40px;
+}

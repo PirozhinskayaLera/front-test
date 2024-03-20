@@ -1,0 +1,32 @@
+//Variables
+
+$color: #FFFFFF;
+$color-light: #EFECF6;
+$color-black-violet: #211041;
+$color-violet: #473667;
+$color-light-violet: #615081;
+$color-brightly-violet: #BD4CC8;
+$color-grey: #D1C6DD;
+
+@mixin font($name, $style, $weight, $url) {
+    @font-face {
+        font-family: $name;
+        font-style: $style;
+        font-weight: $weight;
+        font-display: swap;
+        src: local($name), url($url) format("woff2");
+    }
+}
+
+@mixin text($fsize, $fweight, $mb) {
+    font-size: $fsize;
+    font-weight: $fweight;
+	margin-bottom: $mb;
+
+}
+
+@include font("Montserrat", normal, 300, "../fonts/Montserrat-Light.woff2");
+@include font("Montserrat", normal, 400, "../fonts/Montserrat-Regular.woff2");
+@include font("Montserrat", italic, 600, "../fonts/Montserrat-SemiBoldItalic.woff2");
+@include font("Montserrat", normal, 600, "../fonts/Montserrat-SemiBold.woff2");
+@include font("Montserrat", normal, 700, "../fonts/Montserrat-Bold.woff2");

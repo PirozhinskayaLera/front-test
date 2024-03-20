@@ -1,0 +1,53 @@
+.header {
+    background-color: #EFECF6;
+	border-bottom: 1px solid #D1C6DD;
+    position: fixed;
+    width: 100%;
+    z-index: 12;
+
+    &__wrap{
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        padding: 30px 202px;
+    }
+    &__menu {
+        width: 70%;
+        padding: 0 20px;
+
+        &-list {
+            list-style: none;
+            display: inline;
+        }
+
+        &-item{
+            display: inline;
+            padding: 0 10px;
+        }
+    }
+    &__info{
+        display: flex;
+	    flex-direction: row;
+
+        &-contact{
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            padding-right: 30px;
+
+            &-phone {
+                font-weight: 700;
+                margin-bottom: 7px;
+            }
+            &-email {
+                text-decoration: underline;
+            }
+        }
+    }
+
+    &__logo{
+        img {
+            width: auto;
+        }
+    }
+}

@@ -1,0 +1,42 @@
+.acquaintance {
+    display: flex; 
+	flex-direction: row;
+	background-color: #615081;
+	justify-content: space-between;
+
+    &-left {
+        color: #FFFFFF;
+	    width: 613px;
+
+        h2 {
+            font-size: 60px;
+            font-weight: 300;
+            margin-bottom: 80px;
+        }
+
+        h3 {
+            font-weight: 600;
+        }
+
+        p {
+            font-size: 16px;
+            margin-bottom: 20px;
+            font-weight: 400;
+        }
+    }
+
+    &-right {
+        text-transform: uppercase;
+        color: #473667;
+        margin-top: -30px;
+    }
+
+    &-magic {
+        font-size: 141px;
+        margin-bottom: 70px;
+    }
+
+    &-technology {
+        font-size: 53px;
+    }
+}

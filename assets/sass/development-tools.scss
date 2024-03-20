@@ -1,0 +1,45 @@
+.development-tools {
+    background-color: $color-light-violet;
+    color: $color-light;
+
+    &__nav {
+        display: flex;
+        flex-direction: row;
+
+        &-item {
+            margin-right: 60px;
+            padding-bottom: 18px;
+            margin-bottom: 40px;
+            cursor: pointer;
+        }
+        
+        .active {
+            border-bottom: 6px solid $color-brightly-violet;
+        }
+    }
+
+    &__items {
+
+
+    }
+
+    &__item {
+        display: flex;
+        flex-direction: row;
+
+        &-img {
+            min-width: 760px;
+        }
+
+        &-text {
+            min-width: 760px;
+            padding: 40px 60px;
+            color: $color-light;
+            width: 760px;
+
+            p {
+                margin-bottom: 20px;
+            }
+        }
+    }
+}

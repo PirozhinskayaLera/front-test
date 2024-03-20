@@ -1,0 +1,70 @@
+@import "variables";
+
+* {
+	box-sizing: border-box;
+}
+
+*, html, body {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+	font-family: Montserrat, sans-serif;
+	letter-spacing: calc(1em / 50);
+	color: $color-black-violet;
+}
+
+a{
+	text-decoration: none;
+	color: $color-black-violet;
+}
+
+.btn {
+	display: inline-block;
+	padding: 13px 30px;
+	font-weight: 400;
+	border: 1.5px solid #615081;
+	line-height: 30px;
+}
+
+.container {
+	padding: 120px 200px;
+	background-color: #EFECF6;
+}
+
+img {
+	width: 100%;
+	height: 100%;
+}
+h1, .h1 {
+	@include text(80px, 300, 40px);
+	color: #211041;
+	line-height: 96px;
+	text-transform: uppercase;
+}
+
+h2, .h2 {
+	@include text(60px, 300, 80px);
+	text-transform: uppercase;
+	color: #211041;
+}
+
+h3, .h3 {
+	@include text(40px, 600, 40px);
+}
+
+h4, .h4 {
+	@include text(20px, 400, 40px);
+}
+
+h5, .h5 {
+	@include text(16px, 400, 20px);
+}
+
+@import "header";
+@import "main-banner";
+@import "maximum";
+@import "acquaintance";
+@import "development-tools";
+@import "faq";

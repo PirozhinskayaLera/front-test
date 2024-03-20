@@ -3,14 +3,14 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="icon" type="image/png" sizes="32x32" href="assets/img/favicon.png">
-    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="assets/css/main.css">
     <title>Тестовое задание</title>
 </head>
 <body>
     <header class="header">
         <div class="header__wrap">
             <a href="/" class="header__logo">
-                <img src="assets/img/logo.png" alt="Тестовое задание">
+                <img src="assets/img/logo.svg" alt="Тестовое задание">
             </a>
             <nav class="header__menu">
                 <ul class="header__menu-list">
@@ -50,8 +50,8 @@
                 <p>В нашей компетенции техническое сопровождение бизнеса - IT-аутсорсинг и автоматизация бизнес-процессов с помощью WEB-разработки.</p>
             </div>
             <div class="acquaintance-right">
-                <div class="acquaintance-magic">it's <br><b>not</b><br> magic</div>
-                <div class="acquaintance-technology">it's technologY <br>for your business</div>
+                <p class="acquaintance-magic">it's <br><b>not</b><br> magic</p>
+                <p class="acquaintance-technology">it's technologY <br>for your business</p>
             </div>
         </section>
         
@@ -82,35 +82,36 @@
             </div>
         </section>
         
-        <section class="development-tools">
+        <section class="development-tools container">
             <div class="development-tools__nav">
-                <div class="development-tools__nav-item">
-                    <span>Верстка</span>
+                <div class="development-tools__nav-item active">
+                    <span class="h4">Верстка</span>
                 </div>
                 <div class="development-tools__nav-item">
-                    <span>JS/JQ</span>
+                    <span class="h4">JS/JQ</span>
                 </div>
                 <div class="development-tools__nav-item">
-                    <span>Vue</span>
+                    <span class="h4">Vue</span>
                 </div>
                 <div class="development-tools__nav-item">
-                    <span>Docker</span>
+                    <span class="h4">Docker</span>
                 </div>
                 <div class="development-tools__nav-item">
-                    <span>Bitrix</span>
+                    <span class="h4">Bitrix</span>
                 </div>
                 <div class="development-tools__nav-item">
-                    <span>Winter</span>
+                    <span class="h4">Winter</span>
                 </div>
             </div>
             <div class="development-tools__items">
                 <div class="development-tools__item">
-                    <div>
-                        <img src="" alt="Верстка">
+                    <div class="development-tools__item-img">
+                        <img src="assets/img/slider/dev1.png" alt="Верстка">
                     </div>
-                    <div>
+                    <div class="development-tools__item-text">
                         <h3>Верстка</h3>
-                        <p>Для верстки используем стандартный html5. А вот стили пишем на css3, sass и less. Все новые проекты на October и October2 пишем на sass. 
+                        <p>Для верстки используем стандартный html5. А вот стили пишем на css3, sass и less. <br>
+                            Все новые проекты на October и October2 пишем на sass. 
         Но есть сайты, что у нас на поддержке и они стилизованы либо less, либо css, или даже все вместе. </p>
                         <p>Так что желательно знать препроцессоры хотя бы поверхностно, плюсом будет если умеете писать миксины, функции. Еще мы используем методологию БЭМ, но только для формирование имен блоков, элементов и модификаторов.</p>
                         <p>В нашем коллективе есть много нюансов и договоренностей по работе с версткой. И всему этому мы сможем вас обучить!</p>
@@ -120,20 +121,79 @@
         </section>
         
         <section class="faq container">
-            <h2>Задавай умные вопросы<br>
-                Получай умные ответы</h2>
+            <h3>Задавай умные вопросы<br>
+                Получай умные ответы</h3>
             <div class="faq__items">
                 <div class="faq__item">
-                    <p>Что в вашей компании необычного?</p>
+                    <div class="faq__item-title">
+                        <p class="h4">Что в вашей компании необычного?</p>
+                        <div class="faq__item-title-btn">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="60" height="61" viewBox="0 0 60 61" fill="none"><script xmlns=""/>
+                                <circle cx="30" cy="30.3723" r="29.5" stroke="#615081"/>
+                                <path d="M18 30.3723H41" stroke="#615081" stroke-width="1.5"/>
+                                <script xmlns=""/>
+                            </svg>
+                        </div>
+                        
+                    </div>
+                    <div class="faq__item-content active">
+                        <p>У нас есть свои маскоты. Крутые талисманы для каждого направления работы: совуха CRIMP у админов, кот BUG у разработчиков и ворон WIZER-эксперт в IT-консалтинге</p>
+                    </div>
                 </div>
                 <div class="faq__item">
-                    <p>Как вы относитесь к удаленной работе?</p>
+                    <div class="faq__item-title">
+                        <p class="h4">Как вы относитесь к удаленной работе?</p>
+                        <div class="faq__item-title-btn">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="60" height="61" viewBox="0 0 60 61" fill="none"><script xmlns=""/>
+                                <circle cx="30" cy="30.3723" r="29.5" stroke="#615081"/>
+                                <path d="M18 30.3723H41" stroke="#615081" stroke-width="1.5"/>
+                                <path d="M30 18.3723L30 41.3723" stroke="#615081" stroke-width="1.5"/>
+                                <script xmlns=""/>
+                            </svg>
+                        </div>
+                        
+                    </div>
+                    <div class="faq__item-content">
+                        <p>У нас есть 3 офиса: в Магнитогорске, Челябинске и Санкт-Петербурге. Т
+                            е сотрудники, что работают в этих городах, располагаются в уютных офисах. 
+                            Однако, у нас есть коллеги, работающие из дома в других городах, например, в Хабаровске. 
+                            Мы находим подходящий график работы для всех.</p>
+                    </div>
                 </div>
                 <div class="faq__item">
-                    <p>У меня есть друзья/родственники/знакомые, которым требуются услуги IT-компании. Я получу что-то за рекомендацию?</p>
+                    <div class="faq__item-title">
+                        <p class="h4">У меня есть друзья/родственники/знакомые, которым требуются услуги IT-компании. Я получу что-то за рекомендацию?</p>
+                        <div class="faq__item-title-btn">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="60" height="61" viewBox="0 0 60 61" fill="none"><script xmlns=""/>
+                                <circle cx="30" cy="30.3723" r="29.5" stroke="#615081"/>
+                                <path d="M18 30.3723H41" stroke="#615081" stroke-width="1.5"/>
+                                <path d="M30 18.3723L30 41.3723" stroke="#615081" stroke-width="1.5"/>
+                                <script xmlns=""/>
+                            </svg>
+                        </div>
+                    </div>
+                    <div class="faq__item-content">
+                        <p>А как же! Если это аутсорсинг, то тебе достанется оплата этой компании за первый месяц. 
+                            Если это WEB-проект, то ты получишь процент. Так что приводи всех!</p>
+                    </div>
                 </div>
                 <div class="faq__item">
-                    <p>Какие стратегические планы у вашей компании?</p>
+                    <div class="faq__item-title">
+                        <p class="h4">Какие стратегические планы у вашей компании?</p>
+                        <div class="faq__item-title-btn">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="60" height="61" viewBox="0 0 60 61" fill="none"><script xmlns=""/>
+                                <circle cx="30" cy="30.3723" r="29.5" stroke="#615081"/>
+                                <path d="M18 30.3723H41" stroke="#615081" stroke-width="1.5"/>
+                                <path d="M30 18.3723L30 41.3723" stroke="#615081" stroke-width="1.5"/>
+                                <script xmlns=""/>
+                            </svg>
+                        </div>
+                    </div>
+                    <div class="faq__item-content">
+                        <p>Глобальные и далеко идущие! Да, мы делаем сайты, но наибольший интерес представляет разработка ПО. 
+                            Мы делаем ERP и MES-системы, ПО для транспорта и логистики. 
+                            Мы разрабатываем свой коробочный продукт, который и планируем продвигать в будущем!</p>
+                    </div>
                 </div>
             </div>
         </section>
@@ -170,12 +230,73 @@
         </section>
         <section class="feedback container">
             <h2>обсудим сотрудничество</h2>
-            <div class="feedback__form">
+            <div>
                 <span>Узнать больше подробностей вы можете у наших специалистов, заказав консультацию.</span>
-                <form action=""></form>
+                <form action="/feedback" method="GET" class="feedback__form">
+                    <div class="feedback__inputs">
+                        <div class="feedback__col">
+                            <label class="feedback__input">
+                                <input type="text" id="name" placeholder="Ваше имя*" class="input-field">
+                            </label>
+                            <label class="feedback__input">
+                                <input type="text" id="phone" placeholder="+7       -         -     *" class="input-field">
+                            </label>
+                            <label class="feedback__input">
+                                <input type="email" id="email" placeholder="E-mail" class="input-field">
+                            </label>
+                        </div>
+                        <div class="feedback__col">
+                            <label class="feedback__textarea">
+                                <textarea id="comment" class="input-field"></textarea>
+                            </label>
+                        </div>
+                    </div>
+                    <div class="feedback__agreement">
+                        <label class="feedback__agreement-input">
+                            <textarea id="comment" class="input-field"></textarea>
+                        </label>
+                        <div class="feedback__agreement-text">
+                            Пользуясь сайтом или отправляя любые формы запросов, Вы соглашаетесь с условиями 
+                            <a class="link" href="/assets/docs/policy.pdf">«Положения о конфиденциальности»</a>
+                        </div>
+                    </div>
+                    <button class="btn form-button" type="button">Отправить</button>
+                </form>
             </div>
         </section>
     </main>
-    <footer></footer>
+    <footer class="footer">
+        <section class="footer__wrap">
+            <nav class="footer__menu">
+                <ul class="footer__menu-list">
+                    <li class="footer__menu-item"><a href="#acquaintance">Знакомство</a></li>
+                    <li class="footer__menu-item"><a href="#">Максимум</a></li>
+                    <li class="footer__menu-item"><a href="#">Вопрос/Ответ</a></li>
+                    <li class="footer__menu-item"><a href="#">Контакты</a></li>
+                </ul>
+            </nav>
+            <div class="footer__info">
+                <div  class="footer__info-contact">
+                    <span>г. Челябинск, <br> ул. Доватора, 9 оф.27</span>
+                    <span>8 (351) 225 62 41</span>
+                </div>
+                <div  class="footer__info-contact">
+                    <span>г. Магнитогорск,<br> ул. Строителей, 26</span>
+                    <span>8 (3519) 393-123</span>
+                </div>
+                <div  class="footer__info-contact">
+                    <span>Санкт-Петербург,<br> Бумажная 16к1 оф 432</span>
+                    <span>+7 812 507-98-17</span>
+                </div>
+                <div class="footer__info-right">
+                    <div class="footer__info-soc">
+
+                    </div>
+                    <a href="assets/docs/policy.pdf" class="footer__info-policy" target="_blank">Политика конфиденциальности</a>
+                    <span>ООО «AnalyticumPlus» © 2023</span>
+                </div>
+            </div>
+        </section>
+    </footer>
 </body>
 </html>

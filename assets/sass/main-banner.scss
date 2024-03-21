@@ -5,27 +5,12 @@
 	justify-content: space-between;
     padding-bottom: 0;
 
-    &__text {
-        h1 {
-            color: #211041;
-            font-size: 80px;
-            font-weight: 300;
-            line-height: 96px;
-            margin-bottom: 40px;
-            text-transform: uppercase;
-        }
-
-        p {
-            font-size: 20px;
-        }
-    }
-
     &__img {
         position: relative;
         height: auto;
         display: flex;
         width: 60%;
-        min-width: 951px;
+        max-width: 951px;
         margin-right: -200px;
     }
 }

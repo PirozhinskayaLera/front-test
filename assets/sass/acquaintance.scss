@@ -1,11 +1,11 @@
 .acquaintance {
     display: flex; 
 	flex-direction: row;
-	background-color: #615081;
+	background-color: $color-light-violet;
 	justify-content: space-between;
 
     &-left {
-        color: #FFFFFF;
+        color: $color;
 	    width: 613px;
 
         h2 {
@@ -27,7 +27,7 @@
 
     &-right {
         text-transform: uppercase;
-        color: #473667;
+        color: $color-violet;
         margin-top: -30px;
     }
 

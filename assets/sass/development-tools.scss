@@ -28,11 +28,15 @@
         flex-direction: row;
 
         &-img {
-            min-width: 760px;
+            max-width: 760px;
+            img{
+                object-fit: contain;
+            }
         }
 
         &-text {
-            min-width: 760px;
+            max-width: 760px;
+            width: 60%;
             padding: 40px 60px;
             color: $color-light;
             width: 760px;

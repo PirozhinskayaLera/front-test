@@ -1,0 +1,12 @@
+.feedback {
+    background-color: $color-light-violet;
+
+    h2 {
+        color: $color;
+    }
+
+    &-wrap {
+        display: flex;
+        flex-direction: column;
+    }
+}

@@ -4,25 +4,29 @@
         font-weight: 300;
         margin-bottom: 80px;
         text-transform: uppercase;
-        color: #211041;
+        color: $color-black-violet;
     }
 
     &__advantages {
         display: flex; 
         flex-direction: row;
+        justify-content: space-between;
 
         &-item {
             width: 365px;
             display: flex;
             flex-direction: column;
             padding: 40px 20px;
-            border: 1px solid #D1C6DD;
+            border: 1px solid $color-grey;
             margin-right: 20px;
 
             img {
                 width: 84px;
                 height: 84px;
                 margin-bottom: 40px;
+            }
+            &:last-child {
+                margin-right: 0;
             }
         }
 

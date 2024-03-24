@@ -304,7 +304,7 @@
         <section class="feedback container">
             <h2>Обсудим <br> <b>сотрудничество</b></h2>
             <div class="feedback-wrap">
-                <span>Узнать больше подробностей вы можете у наших специалистов, заказав консультацию.</span>
+                <p class="h5 feedback__text">Узнать больше подробностей вы можете у наших специалистов,<br> заказав консультацию.</p>
                 <form action="/feedback" method="GET" class="feedback__form">
                     <div class="feedback__inputs">
                         <div class="feedback__col">
@@ -319,19 +319,19 @@
                             </label>
                         </div>
                         <div class="feedback__col">
-                            <label class="feedback__textarea">
-                                <textarea id="comment" class="input-field"></textarea>
+                            <label class="feedback__input">
+                                <textarea id="comment" class="input-field" placeholder="Комментарий"></textarea>
                             </label>
                         </div>
                     </div>
                     <div class="feedback__agreement">
-                        <label class="feedback__agreement-input">
-                            <textarea id="comment" class="input-field"></textarea>
-                        </label>
-                        <div class="feedback__agreement-text">
-                            Пользуясь сайтом или отправляя любые формы запросов, Вы соглашаетесь с условиями 
-                            <a class="link" href="/assets/docs/policy.pdf">«Положения о конфиденциальности»</a>
-                        </div>
+                        <input type="checkbox" id="comment" class="input-field">
+                            <div class="feedback__agreement-text">
+                                <p>
+                                    Пользуясь сайтом или отправляя любые формы запросов, Вы соглашаетесь с условиями 
+                                <a class="link" href="/assets/docs/policy.pdf">«Положения о конфиденциальности»</a>
+                                </p>
+                            </div>
                     </div>
                     <button class="btn form-button" type="button">Отправить</button>
                 </form>

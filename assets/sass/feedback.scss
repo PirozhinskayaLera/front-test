@@ -1,5 +1,6 @@
 .feedback {
     background-color: $color-light-violet;
+    color: $color-light;
 
     h2 {
         color: $color;
@@ -8,5 +9,59 @@
     &-wrap {
         display: flex;
         flex-direction: column;
+    }
+    &__inputs{
+        display: flex;
+        flex-direction: row;
+        > :first-child {
+            margin-right: 20px;
+        }
+    }
+
+    &__col{
+        display: flex;
+        flex-direction: column;
+        width: 50%;   
+    }
+    &__input{
+        height: 100%;
+        padding-bottom: 20px;
+        input, textarea{
+            width: 100%;
+            background-color: transparent;
+            color: $color-light;
+            padding: 18px 20px;
+            border: 1px solid $color-light;
+            outline:none;
+        }
+
+        textarea {
+            height: 100%;
+        }
+    }
+
+    &__text {
+        margin-bottom: 40px;
+    }
+
+    &__agreement {
+        display: flex;
+        flex-direction: row;
+        width: 45%;
+        margin-bottom: 40px;
+
+        input {
+            width: 24px;
+            height: 24px;
+        }
+        &-text {
+            margin-left: 30px;
+            p{
+              color: $color-light;  
+            }
+            a {
+                color: $color-brightly-violet;
+            }
+        }
     }
 }

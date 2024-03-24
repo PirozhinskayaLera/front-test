@@ -42,6 +42,12 @@
   padding: 0;
 }
 
+::placeholder {
+  color: #EFECF6;
+  font-size: 16px;
+  font-weight: 400;
+}
+
 body {
   font-family: Montserrat, sans-serif;
   letter-spacing: 0.02em;
@@ -383,6 +389,7 @@ h5, .h5 {
 
 .feedback {
   background-color: #615081;
+  color: #EFECF6;
 }
 .feedback h2 {
   color: #FFFFFF;
@@ -390,6 +397,55 @@ h5, .h5 {
 .feedback-wrap {
   display: flex;
   flex-direction: column;
+}
+.feedback__inputs {
+  display: flex;
+  flex-direction: row;
+}
+.feedback__inputs > :first-child {
+  margin-right: 20px;
+}
+.feedback__col {
+  display: flex;
+  flex-direction: column;
+  width: 50%;
+}
+.feedback__input {
+  height: 100%;
+  padding-bottom: 20px;
+}
+.feedback__input input, .feedback__input textarea {
+  width: 100%;
+  background-color: transparent;
+  color: #EFECF6;
+  padding: 18px 20px;
+  border: 1px solid #EFECF6;
+  outline: none;
+}
+.feedback__input textarea {
+  height: 100%;
+}
+.feedback__text {
+  margin-bottom: 40px;
+}
+.feedback__agreement {
+  display: flex;
+  flex-direction: row;
+  width: 45%;
+  margin-bottom: 40px;
+}
+.feedback__agreement input {
+  width: 24px;
+  height: 24px;
+}
+.feedback__agreement-text {
+  margin-left: 30px;
+}
+.feedback__agreement-text p {
+  color: #EFECF6;
+}
+.feedback__agreement-text a {
+  color: #BD4CC8;
 }
 
 /*# sourceMappingURL=main.css.map */

@@ -51,8 +51,14 @@
         margin-bottom: 40px;
 
         input {
-            width: 24px;
-            height: 24px;
+            width: 1px;
+            height: 1px;
+            position: absolute;
+            opacity: 0;
+
+            &:checked + .feedback__agreement-box::before {
+                opacity: 1;
+            }
         }
         &-text {
             margin-left: 30px;
@@ -61,6 +67,30 @@
             }
             a {
                 color: $color-brightly-violet;
+            }
+        }
+
+        &-box {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 24px;
+            height: 24px;
+            cursor: pointer;
+            border-radius: 3px;
+            background: white;
+
+            &::before {
+                position: absolute;
+                content: "";
+                width: 16px;
+                height: 14px;
+                transition: 0.2s;
+                background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="13" height="12" viewBox="0 0 13 12" fill="none"><script xmlns=""/><path d="M1.20001 4.85185L5.20001 9L11.6 1" stroke="#221143" stroke-width="3"/><script xmlns=""/></svg>');
+                background-position: center;
+                background-size: contain;
+                background-repeat: no-repeat;
+                opacity: 0;
             }
         }
     }

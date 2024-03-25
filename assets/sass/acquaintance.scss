@@ -26,17 +26,21 @@
     }
 
     &-right {
-        text-transform: uppercase;
-        color: $color-violet;
-        margin-top: -30px;
+        // text-transform: uppercase;
+        // color: $color-violet;
+        // margin-top: -30px;
+
+        img {
+           width: auto; 
+        }
     }
 
-    &-magic {
-        font-size: 141px;
-        margin-bottom: 70px;
-    }
+    // &-magic {
+    //     font-size: 141px;
+    //     margin-bottom: 70px;
+    // }
 
-    &-technology {
-        font-size: 53px;
-    }
+    // &-technology {
+    //     font-size: 53px;
+    // }
 }

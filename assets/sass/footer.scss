@@ -35,10 +35,10 @@
             line-height: 24px;
             & > div {
                 display: flex;
-                align-items: center;
             }
 
             &--address {
+                align-items: start;
                 margin-bottom: 40px;
                 svg {
                     margin-right: 12px;
@@ -46,6 +46,7 @@
             }
 
             &--phone {
+                align-items: center;
                 font-weight: 700;
                 svg {
                     margin-right: 8px;

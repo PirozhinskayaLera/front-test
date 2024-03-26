@@ -54,6 +54,10 @@ body {
   color: #211041;
 }
 
+input, textarea {
+  font-family: inherit;
+}
+
 a {
   text-decoration: none;
   color: #211041;
@@ -65,11 +69,31 @@ a {
   font-weight: 400;
   border: 1.5px solid #615081;
   line-height: 30px;
+  min-width: 180px;
+}
+@media screen and (max-width: 1600px) {
+  .btn {
+    padding: 12px 27px;
+    min-width: 176px;
+  }
+}
+.btn--violet {
+  font-size: 16px;
+  min-width: 200px;
+  color: #FFFFFF;
+  background-color: #BD4CC8;
+  box-shadow: 0px 7px 30px 0px rgba(151, 106, 224, 0.4196078431);
+  padding: 19px 55px;
 }
 
 .container {
   padding: 120px 200px;
   background-color: #EFECF6;
+}
+@media screen and (max-width: 1600px) {
+  .container {
+    padding: 120px 250px;
+  }
 }
 
 img {
@@ -86,6 +110,14 @@ h1, .h1 {
   line-height: 96px;
   text-transform: uppercase;
 }
+@media screen and (max-width: 1600px) {
+  h1, .h1 {
+    font-size: 60px;
+    font-weight: 300;
+    margin-bottom: 40px;
+    line-height: 72px;
+  }
+}
 
 h2, .h2 {
   font-size: 60px;
@@ -94,17 +126,38 @@ h2, .h2 {
   text-transform: uppercase;
   color: #211041;
 }
+@media screen and (max-width: 1600px) {
+  h2, .h2 {
+    font-size: 40px;
+    font-weight: 300;
+    margin-bottom: 80px;
+  }
+}
 
 h3, .h3 {
   font-size: 40px;
   font-weight: 600;
   margin-bottom: 40px;
 }
+@media screen and (max-width: 1600px) {
+  h3, .h3 {
+    font-size: 30px;
+    font-weight: 600;
+    margin-bottom: 40px;
+  }
+}
 
 h4, .h4 {
   font-size: 20px;
   font-weight: 400;
   margin-bottom: 40px;
+}
+@media screen and (max-width: 1600px) {
+  h4, .h4 {
+    font-size: 18px;
+    font-weight: 400;
+    margin-bottom: 40px;
+  }
 }
 
 h5, .h5 {
@@ -118,17 +171,29 @@ h5, .h5 {
   border-bottom: 1px solid #D1C6DD;
   position: fixed;
   width: 100%;
+  height: 100%;
   z-index: 12;
+  max-height: 130px;
+}
+@media screen and (max-width: 1600px) {
+  .header {
+    max-height: 100px;
+  }
 }
 .header__wrap {
   display: flex;
   flex-direction: row;
   align-items: center;
-  padding: 30px 202px;
+  height: 100%;
+  padding: 30px 200px;
+}
+@media screen and (max-width: 1600px) {
+  .header__wrap {
+    padding: 20px 250px;
+  }
 }
 .header__menu {
   width: 70%;
-  padding: 0 20px;
 }
 .header__menu-list {
   list-style: none;
@@ -136,7 +201,9 @@ h5, .h5 {
 }
 .header__menu-item {
   display: inline;
-  padding: 0 10px;
+}
+.header__menu-item:not(:last-child) {
+  margin-right: 15px;
 }
 .header__info {
   display: flex;
@@ -146,14 +213,20 @@ h5, .h5 {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  padding-right: 30px;
+  margin-right: 40px;
 }
 .header__info-contact-phone {
   font-weight: 700;
   margin-bottom: 7px;
 }
 .header__info-contact-email {
+  font-size: 14px;
   text-decoration: underline;
+}
+.header__logo {
+  display: flex;
+  max-width: 190px;
+  margin-right: 40px;
 }
 .header__logo img {
   width: auto;
@@ -172,16 +245,14 @@ h5, .h5 {
   display: flex;
   width: 60%;
   max-width: 951px;
-  margin-right: -200px;
+  margin-right: -170px;
+}
+@media screen and (max-width: 1600px) {
+  .main-banner__img {
+    margin-right: -220px;
+  }
 }
 
-.maximum h2 {
-  font-size: 60px;
-  font-weight: 300;
-  margin-bottom: 80px;
-  text-transform: uppercase;
-  color: #211041;
-}
 .maximum__advantages {
   display: flex;
   flex-direction: row;
@@ -194,6 +265,7 @@ h5, .h5 {
   padding: 40px 20px;
   border: 1px solid #D1C6DD;
   margin-right: 20px;
+  word-break: break-word;
 }
 .maximum__advantages-item img {
   width: 84px;
@@ -203,7 +275,7 @@ h5, .h5 {
 .maximum__advantages-item:last-child {
   margin-right: 0;
 }
-.maximum__advantages-title {
+.maximum__advantages-item-title {
   font-size: 20px;
   font-weight: 600;
   margin-bottom: 40px;
@@ -218,14 +290,16 @@ h5, .h5 {
 .acquaintance-left {
   color: #FFFFFF;
   width: 613px;
+  margin-right: 40px;
+}
+@media screen and (max-width: 1600px) {
+  .acquaintance-left {
+    min-width: 545px;
+    padding-top: 28px;
+  }
 }
 .acquaintance-left h2 {
-  font-size: 60px;
-  font-weight: 300;
-  margin-bottom: 80px;
-}
-.acquaintance-left h3 {
-  font-weight: 600;
+  color: #FFFFFF;
 }
 .acquaintance-left p {
   font-size: 16px;
@@ -442,6 +516,7 @@ h5, .h5 {
 }
 .feedback__agreement-text a {
   color: #BD4CC8;
+  text-decoration: underline;
 }
 .feedback__agreement-box {
   display: flex;
@@ -459,7 +534,7 @@ h5, .h5 {
   width: 16px;
   height: 14px;
   transition: 0.2s;
-  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="13" height="12" viewBox="0 0 13 12" fill="none"><script xmlns=""/><path d="M1.20001 4.85185L5.20001 9L11.6 1" stroke="#221143" stroke-width="3"/><script xmlns=""/></svg>');
+  background-image: url("data:image/svg+xml;charset=UTF-8,%3csvg xmlns='http://www.w3.org/2000/svg' width='13' height='12' viewBox='0 0 13 12' fill='none'%3e%3cscript xmlns=''/%3e%3cpath d='M1.20001 4.85185L5.20001 9L11.6 1' stroke='%23221143' stroke-width='3'/%3e%3cscript xmlns=''/%3e%3c/svg%3e");
   background-position: center;
   background-size: contain;
   background-repeat: no-repeat;
@@ -499,15 +574,16 @@ h5, .h5 {
 }
 .footer__info-contact > div {
   display: flex;
-  align-items: center;
 }
 .footer__info-contact--address {
+  align-items: start;
   margin-bottom: 40px;
 }
 .footer__info-contact--address svg {
   margin-right: 12px;
 }
 .footer__info-contact--phone {
+  align-items: center;
   font-weight: 700;
 }
 .footer__info-contact--phone svg {

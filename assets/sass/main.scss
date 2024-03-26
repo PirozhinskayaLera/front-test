@@ -20,6 +20,9 @@ body {
 	letter-spacing: calc(1em / 50);
 	color: $color-black-violet;
 }
+input, textarea {
+	font-family: inherit;
+}
 
 a{
 	text-decoration: none;
@@ -32,11 +35,30 @@ a{
 	font-weight: 400;
 	border: 1.5px solid $color-light-violet;
 	line-height: 30px;
+	min-width: 180px;
+
+	@media screen and (max-width: 1600px) {
+		padding: 12px 27px;
+		min-width: 176px;
+	}
+
+	&--violet{
+		font-size: 16px;
+		min-width: 200px;
+		color: $color;
+		background-color: $color-brightly-violet;
+		box-shadow: 0px 7px 30px 0px $shadow;
+		padding: 19px 55px;
+	}
 }
 
 .container {
 	padding: 120px 200px;
 	background-color: $color-light;
+
+	@media screen and (max-width: 1600px) {
+		padding: 120px 250px;
+	}
 }
 
 img {
@@ -49,20 +71,37 @@ h1, .h1 {
 	color: $color-black-violet;
 	line-height: 96px;
 	text-transform: uppercase;
+
+	@media screen and (max-width: 1600px) {
+		@include text(60px, 300, 40px);
+		line-height: 72px;
+	}
 }
 
 h2, .h2 {
 	@include text(60px, 300, 80px);
 	text-transform: uppercase;
 	color: $color-black-violet;
+
+	@media screen and (max-width: 1600px) {
+		@include text(40px, 300, 80px);
+	}
 }
 
 h3, .h3 {
 	@include text(40px, 600, 40px);
+
+	@media screen and (max-width: 1600px) {
+		@include text(30px, 600, 40px);
+	}
 }
 
 h4, .h4 {
 	@include text(20px, 400, 40px);
+
+	@media screen and (max-width: 1600px) {
+		@include text(18px, 400, 40px);
+	}
 }
 
 h5, .h5 {

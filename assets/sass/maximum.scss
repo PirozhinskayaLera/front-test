@@ -1,12 +1,4 @@
 .maximum {
-    h2 {
-        font-size: 60px;
-        font-weight: 300;
-        margin-bottom: 80px;
-        text-transform: uppercase;
-        color: $color-black-violet;
-    }
-
     &__advantages {
         display: flex; 
         flex-direction: row;
@@ -14,11 +6,13 @@
 
         &-item {
             width: 365px;
+            // min-width: 365px;
             display: flex;
             flex-direction: column;
             padding: 40px 20px;
             border: 1px solid $color-grey;
             margin-right: 20px;
+            word-break: break-word;
 
             img {
                 width: 84px;
@@ -28,12 +22,12 @@
             &:last-child {
                 margin-right: 0;
             }
-        }
 
-        &-title{
+            &-title{
             font-size: 20px;
             font-weight: 600;
             margin-bottom: 40px;
         }
+        } 
     }
 }

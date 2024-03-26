@@ -62,11 +62,12 @@
         }
         &-text {
             margin-left: 30px;
-            p{
+            p {
               color: $color-light;  
             }
             a {
                 color: $color-brightly-violet;
+                text-decoration: underline;
             }
         }
 
@@ -86,7 +87,7 @@
                 width: 16px;
                 height: 14px;
                 transition: 0.2s;
-                background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="13" height="12" viewBox="0 0 13 12" fill="none"><script xmlns=""/><path d="M1.20001 4.85185L5.20001 9L11.6 1" stroke="#221143" stroke-width="3"/><script xmlns=""/></svg>');
+                background-image: url("data:image/svg+xml;charset=UTF-8,%3csvg xmlns='http://www.w3.org/2000/svg' width='13' height='12' viewBox='0 0 13 12' fill='none'%3e%3cscript xmlns=''/%3e%3cpath d='M1.20001 4.85185L5.20001 9L11.6 1' stroke='%23221143' stroke-width='3'/%3e%3cscript xmlns=''/%3e%3c/svg%3e");
                 background-position: center;
                 background-size: contain;
                 background-repeat: no-repeat;

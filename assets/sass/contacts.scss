@@ -11,21 +11,29 @@
     &__cart {
         width: 100%; 
         height: 580px; 
+        max-height: 580px; 
         padding: 0; 
         margin: 0;
         max-width: 1006px;
+
+        @media screen and (max-width: 1600px)
+        {
+            height: auto;
+            max-width: 632px;
+        }
     }
 
     &__info{
         margin-left: 60px;
 
-        img {
-            // width: 30px;
-            // height: 30px;
+        .h4 {
+            font-weight: 600;
         }
 
         &-item{
-            margin-bottom: 40px;
+            &:not(:last-child) {
+              margin-bottom: 40px;  
+            }
         }
 
         &-address{
@@ -35,16 +43,19 @@
 
             p {
                 margin-left: 12px;
+                line-height: 22.5px;
             }
         }
 
         &-phone{
             display: flex;
             align-items: center;
-            margin-bottom: 20px;
             font-weight: 700;
+            margin-left: 1px;
+
             a {
                 margin-left: 10px;
+                line-height: 22.5px;
             }
         }
     }

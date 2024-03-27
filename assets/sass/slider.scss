@@ -22,9 +22,15 @@
         max-width: 750px;
         width: 50%;
         height: auto;
+        max-height: 576px;
 
         img {
             object-fit: cover;
+        }
+
+        @media screen and (max-width: 1600px)
+        {
+            max-height: 394px;
         }
     }
 }

@@ -28,21 +28,35 @@
         flex-direction: row;
 
         &-img {
+            width: 50%;
             max-width: 760px;
+            max-height: 524px;
             img{
-                object-fit: contain;
+                object-fit: cover;
             }
         }
 
         &-text {
             max-width: 760px;
             width: 60%;
-            padding: 40px 60px;
+            padding: 40px 60px 60px;
             color: $color-light;
-            width: 760px;
+            width: 50%;
 
             p {
-                margin-bottom: 20px;
+                line-height: 20.8px;
+                font-size: 16px;
+
+                &:not(:last-child) {
+                    margin-bottom: 28px;
+                }
+
+                @media screen and (max-width: 1600px)
+                {
+                    &:last-child {
+                        margin-bottom: 0;
+                    }
+                }
             }
         }
     }

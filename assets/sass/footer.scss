@@ -3,6 +3,18 @@
    padding: 60px 200px;
    color: $color;
 
+   @media screen and (max-width: 1600px) {
+        padding: 60px 250px;
+    }
+
+   @media screen and (max-width: 1450px) {
+        padding: 60px 120px;
+    }
+
+    @media screen and (max-width: 1100px) {
+        padding: 60px 40px;
+    }
+
    a {
       color: $color;
    }
@@ -30,11 +42,20 @@
         display: flex;
         flex-direction: row;
         justify-content: space-between;
+        flex-wrap: wrap;
+
+        @media screen and (max-width: 768px) {
+            // flex-direction: column;
+        }
 
         &-contact {
             line-height: 24px;
             & > div {
                 display: flex;
+            }
+
+            @media screen and (max-width: 1100px) {
+                width: 50%;
             }
 
             &--address {
@@ -48,9 +69,21 @@
             &--phone {
                 align-items: center;
                 font-weight: 700;
+
+                @media screen and (max-width: 1100px) {
+                    margin-bottom: 20px;
+                }
+
                 svg {
                     margin-right: 8px;
                 }
+            }
+        }
+
+        &-right {
+            @media screen and (max-width: 1100px) {
+                margin-top: 20px;
+                width: 100%;
             }
         }
 

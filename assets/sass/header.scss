@@ -11,6 +11,10 @@
         max-height: 100px;
     }
 
+    @media screen and (max-width: 1100px) {
+        max-height: 60px;
+	}
+
     &__wrap{
         display: flex;
         flex-direction: row;
@@ -20,6 +24,14 @@
 
         @media screen and (max-width: 1600px) {
             padding: 20px 250px;
+        }
+
+        @media screen and (max-width: 1450px) {
+            padding: 20px 120px;
+        }
+
+        @media screen and (max-width: 1100px) {
+            padding: 18px 40px;
         }
     }
 
@@ -67,6 +79,17 @@
 
         img {
             width: auto;
+        }
+    }
+
+    &__inner {
+        display: flex;
+        width: 100%;
+        align-items: center;
+        justify-content: space-between;
+
+        @media screen and (max-width: 1100px) {
+            opacity: 0;
         }
     }
 }

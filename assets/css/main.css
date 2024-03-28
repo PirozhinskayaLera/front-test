@@ -94,6 +94,16 @@ a {
     padding: 120px 250px;
   }
 }
+@media screen and (max-width: 1450px) {
+  .container {
+    padding: 80px 120px;
+  }
+}
+@media screen and (max-width: 1100px) {
+  .container {
+    padding: 80px 40px;
+  }
+}
 
 img {
   width: 100%;
@@ -130,6 +140,13 @@ h2, .h2 {
     font-size: 40px;
     font-weight: 300;
     margin-bottom: 80px;
+  }
+}
+@media screen and (max-width: 1100px) {
+  h2, .h2 {
+    font-size: 40px;
+    font-weight: 300;
+    margin-bottom: 60px;
   }
 }
 
@@ -192,6 +209,11 @@ h5, .h5 {
     max-height: 100px;
   }
 }
+@media screen and (max-width: 1100px) {
+  .header {
+    max-height: 60px;
+  }
+}
 .header__wrap {
   display: flex;
   flex-direction: row;
@@ -202,6 +224,16 @@ h5, .h5 {
 @media screen and (max-width: 1600px) {
   .header__wrap {
     padding: 20px 250px;
+  }
+}
+@media screen and (max-width: 1450px) {
+  .header__wrap {
+    padding: 20px 120px;
+  }
+}
+@media screen and (max-width: 1100px) {
+  .header__wrap {
+    padding: 18px 40px;
   }
 }
 .header__menu {
@@ -243,6 +275,17 @@ h5, .h5 {
 .header__logo img {
   width: auto;
 }
+.header__inner {
+  display: flex;
+  width: 100%;
+  align-items: center;
+  justify-content: space-between;
+}
+@media screen and (max-width: 1100px) {
+  .header__inner {
+    opacity: 0;
+  }
+}
 
 .main-banner {
   display: flex;
@@ -250,6 +293,16 @@ h5, .h5 {
   align-items: center;
   justify-content: space-between;
   padding-bottom: 0;
+}
+@media screen and (max-width: 1100px) {
+  .main-banner {
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+  }
+  .main-banner > div {
+    width: 100%;
+  }
 }
 .main-banner__img {
   position: relative;
@@ -262,6 +315,16 @@ h5, .h5 {
 @media screen and (max-width: 1600px) {
   .main-banner__img {
     margin-right: -220px;
+  }
+}
+@media screen and (max-width: 1450px) {
+  .main-banner__img {
+    margin-right: -100px;
+  }
+}
+@media screen and (max-width: 1100px) {
+  .main-banner__img {
+    margin-right: -60px;
   }
 }
 
@@ -308,15 +371,31 @@ h5, .h5 {
   background-color: #615081;
   justify-content: space-between;
 }
+@media screen and (max-width: 1100px) {
+  .acquaintance {
+    flex-direction: column;
+  }
+  .acquaintance > div {
+    width: 100%;
+    max-width: 100%;
+  }
+}
 .acquaintance-left {
   color: #FFFFFF;
-  width: 613px;
+  width: 50%;
+  max-width: 613px;
   margin-right: 40px;
 }
 @media screen and (max-width: 1600px) {
   .acquaintance-left {
     min-width: 545px;
     padding-top: 28px;
+  }
+}
+@media screen and (max-width: 1100px) {
+  .acquaintance-left {
+    margin-bottom: 80px;
+    min-width: 45%;
   }
 }
 .acquaintance-left h2 {
@@ -329,6 +408,11 @@ h5, .h5 {
 }
 .acquaintance-right img {
   width: auto;
+}
+@media screen and (max-width: 1450px) {
+  .acquaintance-right img {
+    height: 80%;
+  }
 }
 
 .development-tools {
@@ -412,6 +496,9 @@ h5, .h5 {
   max-width: 890px;
   opacity: 0;
   height: 0;
+}
+.faq__item-content p {
+  font-size: 16px;
 }
 .faq__item .active {
   margin-bottom: 30px;
@@ -601,6 +688,21 @@ h5, .h5 {
   padding: 60px 200px;
   color: #FFFFFF;
 }
+@media screen and (max-width: 1600px) {
+  .footer {
+    padding: 60px 250px;
+  }
+}
+@media screen and (max-width: 1450px) {
+  .footer {
+    padding: 60px 120px;
+  }
+}
+@media screen and (max-width: 1100px) {
+  .footer {
+    padding: 60px 40px;
+  }
+}
 .footer a {
   color: #FFFFFF;
 }
@@ -623,12 +725,18 @@ h5, .h5 {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
+  flex-wrap: wrap;
 }
 .footer__info-contact {
   line-height: 24px;
 }
 .footer__info-contact > div {
   display: flex;
+}
+@media screen and (max-width: 1100px) {
+  .footer__info-contact {
+    width: 50%;
+  }
 }
 .footer__info-contact--address {
   align-items: start;
@@ -641,8 +749,19 @@ h5, .h5 {
   align-items: center;
   font-weight: 700;
 }
+@media screen and (max-width: 1100px) {
+  .footer__info-contact--phone {
+    margin-bottom: 20px;
+  }
+}
 .footer__info-contact--phone svg {
   margin-right: 8px;
+}
+@media screen and (max-width: 1100px) {
+  .footer__info-right {
+    margin-top: 20px;
+    width: 100%;
+  }
 }
 .footer__info-policy {
   line-height: 24px;

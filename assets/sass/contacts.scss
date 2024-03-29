@@ -6,6 +6,10 @@
 
     &-wrap {
         display: flex;
+
+        @media screen and (max-width: 768px) {
+            flex-direction: column;
+        }
     }
 
     &__cart {
@@ -25,6 +29,10 @@
 
     &__info{
         margin-left: 60px;
+
+        @media screen and (max-width: 768px) {
+            margin-left: 0;
+        }
 
         .h4 {
             font-weight: 600;

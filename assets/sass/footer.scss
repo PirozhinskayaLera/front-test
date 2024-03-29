@@ -26,10 +26,14 @@
 
    &__menu {
         margin-bottom: 80px;
-
+        
         &-list {
             list-style: none;
             display: inline;
+            @media screen and (max-width: 768px) {  
+                display: flex;
+                justify-content: space-between;
+            }
         }
 
         &-item{
@@ -45,7 +49,7 @@
         flex-wrap: wrap;
 
         @media screen and (max-width: 768px) {
-            // flex-direction: column;
+            flex-direction: column;
         }
 
         &-contact {
@@ -84,6 +88,10 @@
             @media screen and (max-width: 1100px) {
                 margin-top: 20px;
                 width: 100%;
+            }
+
+            @media screen and (max-width: 768px) {
+                margin-top: 0;
             }
         }
 

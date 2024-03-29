@@ -26,6 +26,9 @@
             margin-bottom: 80px;
             min-width: 45%;
         }
+        @media screen and (max-width: 768px) {
+            padding-top: 0;
+        }
 
         h2 {
             color: $color;
@@ -45,6 +48,11 @@
             @media screen and (max-width: 1450px)
             {
                 height: 80%;
+            }
+
+            @media screen and (max-width: 768px) {
+                height: 100%;
+                width: 100%;
             }
         }
     }

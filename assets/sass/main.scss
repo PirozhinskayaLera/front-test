@@ -66,6 +66,10 @@ a{
 	@media screen and (max-width: 1100px) {
 		padding: 80px 40px;
 	}
+
+	@media screen and (max-width: 48px) {
+		padding: 80px 24px;
+	} 
 }
 
 img {
@@ -80,9 +84,14 @@ h1, .h1 {
 	text-transform: uppercase;
 
 	@media screen and (max-width: 1600px) {
-		@include text(60px, 300, 40px);
+		font-size: 60px;
 		line-height: 72px;
 	}
+
+	@media screen and (max-width: 480px) {
+		font-size: 40px;
+		line-height: 48px;
+	} 
 }
 
 h2, .h2 {
@@ -91,20 +100,30 @@ h2, .h2 {
 	color: $color-black-violet;
 
 	@media screen and (max-width: 1600px) {
-		@include text(40px, 300, 80px);
+		font-size: 40px;
 	}
 
 	@media screen and (max-width: 1100px) {
-		@include text(40px, 300, 60px);
+		margin-bottom: 60px;
 	}
+
+	@media screen and (max-width: 480px) {
+		font-size: 30px;
+		line-height: 36px;
+	} 
 }
 
 h3, .h3 {
 	@include text(40px, 600, 40px);
 
 	@media screen and (max-width: 1600px) {
-		@include text(30px, 600, 40px);
+		font-size: 30px;
 	}
+
+	@media screen and (max-width: 480px) {
+		font-size: 24px;
+		line-height: 28.8x;
+	} 
 }
 
 h4, .h4 {

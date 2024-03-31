@@ -15,8 +15,16 @@
         padding: 60px 40px;
     }
 
+    @media screen and (max-width: 480px) {
+		padding: 60px 24px;
+	} 
+
    a {
       color: $color;
+      
+      &:hover {
+		color: $color-brightly-violet;
+	}
    }
 
    &__wrap {
@@ -26,6 +34,10 @@
 
    &__menu {
         margin-bottom: 80px;
+
+        @media screen and (max-width: 480px) {
+            margin-bottom: 60px;
+        }
         
         &-list {
             list-style: none;
@@ -33,12 +45,36 @@
             @media screen and (max-width: 768px) {  
                 display: flex;
                 justify-content: space-between;
+                flex-wrap: wrap;
             }
+
+            @media screen and (max-width: 635px) {
+                :nth-child( -n + 2 ) {
+                    margin-bottom: 20px;
+                }
+            }
+
+            @media screen and (max-width: 480px) {
+                flex-direction: column;
+
+                :not(:last-child) {
+                    margin-bottom: 40px;
+                }
+            }
+            
         }
 
         &-item{
             display: inline;
             padding-right: 40px;  
+
+            @media screen and (max-width: 635px) {
+                width: 50%;
+            }
+
+            @media screen and (max-width: 480px) {
+                width: 100%;
+            }
         }
     }
 
@@ -60,6 +96,10 @@
 
             @media screen and (max-width: 1100px) {
                 width: 50%;
+            }
+
+            @media screen and (max-width: 480px) {
+                width: 100%;
             }
 
             &--address {
@@ -102,6 +142,10 @@
                 text-decoration: underline;
                 margin-bottom: 20px;
                 font-weight: 300;
+
+                &:hover {
+                    color: $color-brightly-violet;
+                }
             }
         }
 

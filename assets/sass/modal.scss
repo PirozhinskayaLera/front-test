@@ -1,0 +1,82 @@
+.modal {
+	display: flex;
+	justify-content: center;
+	display: none;
+
+	&-feedback {
+		background-color: $color-light-violet;
+		width: 100%;
+		max-width: 590px;
+		padding: 20px 20px 60px;
+		display: flex;
+		flex-direction: column;
+		position: relative;
+		
+		h4 {
+			font-size: 20px;
+			font-weight: 700;
+			margin-bottom: 10px;
+			line-height: 24px;
+		}
+		h4, p {
+			color: $color;
+		}
+
+		&__title {
+			margin-bottom: 40px;
+			text-align: center;
+		}
+
+		&__inputs {
+			display: flex;
+			flex-direction: column;
+			margin-bottom: 20px;
+		}
+
+		&__agreement {
+			display: flex;
+			flex-direction: row;
+			margin-bottom: 40px;
+	
+			&-text {
+				margin-left: 12px;
+				p {
+					color: $color-light;  
+					font-size: 14px;
+					text-align: left;
+					line-height: 20px;
+				}
+			}
+		}
+
+		&__form {
+			text-align: center;
+			padding: 0 40px;
+		}
+
+		&__close {
+			text-align: right;
+			margin-bottom: 20px;
+			padding: 3px 5px;
+			svg {
+				cursor: pointer;
+			}
+		}
+
+		&--success {
+			width: 100%;
+			max-width: 329px;
+			max-height: 208px;
+			padding: 80px;
+			background-color: $color-light-violet;
+
+			h4 {
+				font-size: 20px;
+				margin-bottom: 0;
+				font-weight: 700;
+				color: $color;
+				line-height: 24px;
+			}
+		}
+	}
+}

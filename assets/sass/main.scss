@@ -13,6 +13,9 @@
 	color: $color-light;
 	font-size: 16px;
 	font-weight: 400;
+	-webkit-transition: 0.2s;
+    -moz-transition: 0.2s;
+	transition: 0.2s;
 }
 
 body {
@@ -22,11 +25,19 @@ body {
 }
 input, textarea {
 	font-family: inherit;
+	line-height: 18px;
 }
 
 a{
 	text-decoration: none;
 	color: $color-black-violet;
+	-webkit-transition: 0.2s;
+    -moz-transition: 0.2s;
+	transition: 0.2s;
+
+	&:hover {
+		color: $color-brightly-violet;
+	}
 }
 
 .btn {
@@ -35,19 +46,61 @@ a{
 	font-weight: 400;
 	border: 1.5px solid $color-light-violet;
 	min-width: 180px;
+	cursor: pointer;
+	-webkit-transition: 0.2s;
+    -moz-transition: 0.2s;
+	transition: 0.2s;
 
 	@media screen and (max-width: 1600px) {
 		min-width: 176px;
 	}
 
 	&--violet{
+		display: inline-block;
 		font-size: 16px;
 		min-width: 200px;
-		color: $color;
-		background-color: $color-brightly-violet;
+		@include btnColor($color, $color-brightly-violet, $color-brightly-violet);
 		box-shadow: 0px 7px 30px 0px $shadow;
 		padding: 20px 55px;
 		line-height: 30px;
+	
+		&:hover {
+			box-shadow: 0px 7px 30px 0px $color-brightly-violet;
+		}
+	
+		&:focus {
+			outline: 1px solid $color-brightly-violet;
+			outline-offset: 6px;
+			border-radius: 3px;
+			-webkit-transition: 0.1s;
+        	-moz-transition: 0.1s;
+			transition: 0.1s;
+		}
+	
+		&:disabled {
+			@include btnColor($color-light-violet, $color-grey, $color-grey);
+			pointer-events: none;
+		}
+	}
+
+	&--white{
+		&:hover, :active {
+			@include btnColor($color-brightly-violet, inherit, $color-brightly-violet);
+		}
+	
+		&:focus {
+			outline: 1px solid $color-brightly-violet;
+			outline-offset: 6px;
+			border-radius: 3px;
+			-webkit-transition: 0.1s;
+        	-moz-transition: 0.1s;
+			transition: 0.1s;
+		}
+	
+		&:disabled {
+			@include btnColor($color-light-violet, $color-grey, $color-grey);
+			pointer-events: none;
+		}
 	}
 }
 
@@ -67,7 +120,7 @@ a{
 		padding: 80px 40px;
 	}
 
-	@media screen and (max-width: 48px) {
+	@media screen and (max-width: 480px) {
 		padding: 80px 24px;
 	} 
 }
@@ -92,6 +145,9 @@ h1, .h1 {
 		font-size: 40px;
 		line-height: 48px;
 	} 
+	@media screen and (max-width: 360px) {
+		font-size: 35px;
+	}
 }
 
 h2, .h2 {
@@ -111,6 +167,9 @@ h2, .h2 {
 		font-size: 30px;
 		line-height: 36px;
 	} 
+	@media screen and (max-width: 360px) {
+		font-size: 25px;
+	}
 }
 
 h3, .h3 {
@@ -145,6 +204,21 @@ h5, .h5 {
 	@include text(16px, 400, 20px);
 }
 
+.link {
+	&--violet {
+		font-size: 14px;
+		color: $color-brightly-violet;
+		text-decoration: underline;
+		-webkit-transition: 0.2s;
+        -moz-transition: 0.2s;
+		transition: 0.2s;
+
+			&:hover {
+				text-decoration: none;
+			}
+	}
+}
+
 @import "header";
 @import "main-banner";
 @import "maximum";
@@ -155,3 +229,5 @@ h5, .h5 {
 @import "contacts";
 @import "feedback";
 @import "footer";
+@import "modal";
+@import "form";

@@ -33,11 +33,11 @@
 
         &-content {
             max-width: 890px;
-            opacity: 0;
-            height: 0;
+            display: none;
 
             p {
                 font-size: 16px;
+                padding-bottom: 30px;
             }
         }
 

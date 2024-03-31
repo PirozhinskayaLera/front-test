@@ -21,43 +21,14 @@
         @media screen and (max-width: 768px) {
             flex-direction: column; 
         }
-    }
-
-    &__col{
-        display: flex;
-        flex-direction: column;
-        width: 50%;   
-
-        @media screen and (max-width: 768px) {
-            width: 100%;   
-        }
-    }
-    &__input{
-        height: 100%;
-
-        &:not(:last-child) {
-            padding-bottom: 40px; 
-        }
-
-        @media screen and (max-width: 768px) {  
-            padding-bottom: 24px;
-
-            &:not(:last-child) {
-                padding-bottom: 24px;
+        &-col{
+            display: flex;
+            flex-direction: column;
+            width: 50%;   
+    
+            @media screen and (max-width: 768px) {
+                width: 100%;   
             }
-        }
-
-        input, textarea{
-            width: 100%;
-            background-color: transparent;
-            color: $color-light;
-            padding: 18px 20px;
-            border: 1px solid $color-light;
-            outline:none;
-        }
-
-        textarea {
-            height: 100%;
         }
     }
 
@@ -74,50 +45,11 @@
             width: 100%;
         }
 
-        input {
-            width: 1px;
-            height: 1px;
-            position: absolute;
-            opacity: 0;
-
-            &:checked + .feedback__agreement-box::before {
-                opacity: 1;
-            }
-        }
         &-text {
             margin-left: 30px;
             p {
                 color: $color-light;  
                 font-size: 14px;
-            }
-            a {
-                font-size: 14px;
-                color: $color-brightly-violet;
-                text-decoration: underline;
-            }
-        }
-
-        &-box {
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            width: 24px;
-            height: 24px;
-            cursor: pointer;
-            border-radius: 3px;
-            background: white;
-
-            &::before {
-                position: absolute;
-                content: "";
-                width: 16px;
-                height: 14px;
-                transition: 0.2s;
-                background-image: url("data:image/svg+xml;charset=UTF-8,%3csvg xmlns='http://www.w3.org/2000/svg' width='13' height='12' viewBox='0 0 13 12' fill='none'%3e%3cscript xmlns=''/%3e%3cpath d='M1.20001 4.85185L5.20001 9L11.6 1' stroke='%23221143' stroke-width='3'/%3e%3cscript xmlns=''/%3e%3c/svg%3e");
-                background-position: center;
-                background-size: contain;
-                background-repeat: no-repeat;
-                opacity: 0;
             }
         }
     }

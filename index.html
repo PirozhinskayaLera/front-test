@@ -4,18 +4,23 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="icon" type="image/png" sizes="32x32" href="assets/img/favicon.png">
+    <link rel="stylesheet" href="assets/css/jquery.fancybox.min.css">
     <link rel="stylesheet" href="assets/css/main.css">
     <script src="https://api-maps.yandex.ru/2.1/?lang=ru_RU&amp;apikey=5f03a5bd-6bba-49c3-bd54-57325b9879be" type="text/javascript"></script>
-    <script src="assets/js/main.js" type="text/javascript"></script>
 </head>
-<body>
+<body style="overflow: visible;">
     <header class="header">
         <div class="header__wrap">
             <a href="/" class="header__logo">
                 <img src="assets/img/logo.svg" alt="Тестовое задание">
             </a>
+            <div class="header__hamburger">
+                <div class="header__hamburger--inner">
+                    
+                </div>
+            </div>
             <div class="header__inner">
-                    <nav class="header__menu">
+                <nav class="header__menu">
                     <ul class="header__menu-list">
                         <li class="header__menu-item"><a href="#acquaintance">Знакомство</a></li>
                         <li class="header__menu-item"><a href="#maximum">Максимум</a></li>
@@ -29,7 +34,43 @@
                         <a href="mailto:info@analyticum.pro" class="header__info-contact-email">info@analyticum.pro</a>
                     </div>
                     <div class="header__info-consult">
-                        <a href="#" class="btn">Консультация</a>
+                        <a href="#modal-feedback" data-fancybox data-modal="true" class="btn btn--white">Консультация</a>
+                    </div>
+                </div>
+            </div>
+            <div class="header__mobile">
+                <nav class="header__mobile-menu">
+                    <ul class="header__mobile-menu-list">
+                        <li class="header__mobile-menu-item"><a href="#acquaintance">Знакомство</a></li>
+                        <li class="header__mobile-menu-item"><a href="#maximum">Максимум</a></li>
+                        <li class="header__mobile-menu-item"><a href="#faq">Вопрос/Ответ</a></li>
+                        <li class="header__mobile-menu-item"><a href="#contacts">Контакты</a></li>
+                    </ul>
+                </nav>
+                <div class="header__mobile-info">
+                    <div class="header__mobile-info-consult">
+                        <a href="#modal-feedback" data-fancybox data-modal="true" class="btn btn--violet">Консультация</a>
+                    </div>
+                    <div class="header__mobile-info-soc">
+                        <a href="https://vk.com/analyticum_plus" class="header__mobile-info-soc--vk">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" viewBox="0 0 30 30" fill="none"><script xmlns=""/>
+                            <path fill-rule="evenodd" clip-rule="evenodd" d="M2.10883 2.10883C0 4.21766 0 7.61175 0 14.4V15.6C0 22.3883 0 25.7823 2.10883 27.8912C4.21766 30 7.61175 30 14.4 30H15.6C22.3883 30 25.7823 30 27.8912 27.8912C30 25.7823 30 22.3883 30 15.6V14.4C30 7.61175 30 4.21766 27.8912 2.10883C25.7823 0 22.3883 0 15.6 0H14.4C7.61175 0 4.21766 0 2.10883 2.10883ZM5.06262 9.12598C5.22512 16.926 9.12506 21.6135 15.9626 21.6135H16.3502V17.151C18.8627 17.401 20.7625 19.2385 21.525 21.6135H25.0751C24.1001 18.0635 21.5375 16.101 19.9375 15.351C21.5375 14.426 23.7875 12.176 24.325 9.12598H21.0999C20.3999 11.601 18.3252 13.851 16.3502 14.0635V9.12598H13.1251V17.776C11.1251 17.276 8.60012 14.851 8.48762 9.12598H5.06262Z" fill="#211041"/>
+                            <script xmlns=""/></svg>
+                        </a>
+                        <a href="https://www.youtube.com/channel/UCuNOhGENYxn1ft8U7fwKzlw" class="header__mobile-info-soc--youtube">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" viewBox="0 0 30 30" fill="none"><script xmlns=""/>
+                            <path fill-rule="evenodd" clip-rule="evenodd" d="M4.3064 0C1.92804 0 0 1.92804 0 4.3064V25.6936C0 28.072 1.92804 30 4.3064 30H25.6936C28.072 30 30 28.072 30 25.6936V4.3064C30 1.92804 28.072 0 25.6936 0H4.3064ZM24.6611 10.5396C24.5455 10.1187 24.3178 9.73462 24.0006 9.42571C23.6834 9.11679 23.288 8.89391 22.8538 8.77937C21.2556 8.36347 14.8673 8.36347 14.8673 8.36347C14.8673 8.36347 8.47901 8.36347 6.88078 8.77937C6.44662 8.89391 6.05117 9.11679 5.73399 9.42571C5.41682 9.73462 5.18905 10.1187 5.07347 10.5396C4.64604 12.093 4.64604 15.3325 4.64604 15.3325C4.64604 15.3325 4.64604 18.572 5.07347 20.1254C5.18905 20.5463 5.41682 20.9304 5.73399 21.2393C6.05117 21.5482 6.44662 21.7711 6.88078 21.8857C8.47901 22.3015 14.8673 22.3015 14.8673 22.3015C14.8673 22.3015 21.2556 22.3015 22.8538 21.8857C23.288 21.7711 23.6834 21.5482 24.0006 21.2393C24.3178 20.9304 24.5455 20.5463 24.6611 20.1254C25.0885 18.572 25.0885 15.3325 25.0885 15.3325C25.0885 15.3325 25.0885 12.093 24.6611 10.5396ZM12.7766 18.2741L18.1195 15.3325L12.7766 12.3909V18.2741Z" fill="#211041"/>
+                            <script xmlns=""/></svg>
+                        </a>
+                        <a href="https://t.me/+79681188631" class="header__mobile-info-soc--tg">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" viewBox="0 0 30 30" fill="none"><script xmlns=""/>
+                            <path fill-rule="evenodd" clip-rule="evenodd" d="M30 15C30 23.2843 23.2843 30 15 30C6.71573 30 0 23.2843 0 15C0 6.71573 6.71573 0 15 0C23.2843 0 30 6.71573 30 15ZM15.5375 11.0741C14.0785 11.681 11.1626 12.937 6.78981 14.8421C6.07973 15.1245 5.70777 15.4007 5.6739 15.6708C5.61668 16.1273 6.18833 16.3071 6.96679 16.5519C7.07267 16.5852 7.18239 16.6197 7.29486 16.6562C8.06074 16.9052 9.09098 17.1964 9.62655 17.208C10.1124 17.2185 10.6546 17.0182 11.2532 16.6071C15.3389 13.8492 17.4479 12.4552 17.5803 12.4252C17.6737 12.404 17.8032 12.3773 17.8909 12.4553C17.9786 12.5332 17.97 12.6809 17.9607 12.7205C17.9041 12.9619 15.6601 15.0481 14.4988 16.1277C14.1368 16.4643 13.88 16.703 13.8275 16.7575C13.7099 16.8797 13.5901 16.9952 13.4749 17.1062C12.7634 17.7921 12.2298 18.3065 13.5045 19.1465C14.117 19.5501 14.6071 19.8839 15.0961 20.2169C15.6301 20.5806 16.1628 20.9433 16.852 21.3951C17.0275 21.5101 17.1952 21.6297 17.3585 21.7461C17.98 22.1892 18.5384 22.5872 19.2282 22.5238C19.629 22.4869 20.043 22.11 20.2533 20.9859C20.7502 18.3294 21.727 12.5735 21.9527 10.2017C21.9725 9.99387 21.9476 9.72792 21.9276 9.61118C21.9077 9.49443 21.8659 9.32809 21.7142 9.20496C21.5344 9.05913 21.257 9.02838 21.1329 9.03056C20.5687 9.0405 19.7031 9.34148 15.5375 11.0741Z" fill="#211041"/>
+                            <script xmlns=""/></svg>
+                        </a>
+                    </div>
+                    <div class="header__mobile-info-contact">
+                        <a href="tel:8 (3519) 393-123" class="header__mobile-info-contact-phone">8 (3519) 393-123</a>
+                        <a href="mailto:info@analyticum.pro" class="header__mobile-info-contact-email">info@analyticum.pro</a>
                     </div>
                 </div>
             </div>
@@ -95,39 +136,110 @@
         
         <section class="development-tools container">
             <div class="development-tools__nav">
-                <div class="development-tools__nav-item active">
+                <div class="development-tools__nav-item active" data-tab-id="1">
                     <span class="h4">Верстка</span>
                 </div>
-                <div class="development-tools__nav-item">
+                <div class="development-tools__nav-item" data-tab-id="2">
                     <span class="h4">JS/JQ</span>
                 </div>
-                <div class="development-tools__nav-item">
+                <div class="development-tools__nav-item" data-tab-id="3">
                     <span class="h4">Vue</span>
                 </div>
-                <div class="development-tools__nav-item">
+                <div class="development-tools__nav-item" data-tab-id="4">
                     <span class="h4">Docker</span>
                 </div>
-                <div class="development-tools__nav-item">
+                <div class="development-tools__nav-item" data-tab-id="5">
                     <span class="h4">Bitrix</span>
                 </div>
-                <div class="development-tools__nav-item">
+                <div class="development-tools__nav-item" data-tab-id="6">
                     <span class="h4">Winter</span>
                 </div>
             </div>
             <div class="development-tools__items">
-                <div class="development-tools__item">
-                    <div class="development-tools__item-img">
-                        <img src="assets/img/tabs/dev1.jpg" alt="Верстка">
-                    </div>
-                    <div class="development-tools__item-text">
-                        <h3>Верстка</h3>
-                        <p>Для верстки используем стандартный html5. А вот стили пишем на css3, sass и less. <br>
-                            Все новые проекты на October и October2 пишем на sass. 
-        Но есть сайты, что у нас на поддержке и они стилизованы либо less, либо css, или даже все вместе. </p>
-                        <p>Так что желательно знать препроцессоры хотя бы поверхностно, плюсом будет если умеете писать миксины, функции. Еще мы используем методологию БЭМ, но только для формирование имен блоков, элементов и модификаторов.</p>
-                        <p>В нашем коллективе есть много нюансов и договоренностей по работе с версткой. И всему этому мы сможем вас обучить!</p>
+                <div class="development-tools__tab-section" data-tab-content="1">
+                    <div class="development-tools__item">
+                        <div class="development-tools__item-img">
+                            <img src="assets/img/tabs/dev1.jpg" alt="Верстка">
+                        </div>
+                        <div class="development-tools__item-text">
+                            <h3>Верстка</h3>
+                            <p>Для верстки используем стандартный html5. А вот стили пишем на css3, sass и less. <br>
+                                Все новые проекты на October и October2 пишем на sass. 
+            Но есть сайты, что у нас на поддержке и они стилизованы либо less, либо css, или даже все вместе. </p>
+                            <p>Так что желательно знать препроцессоры хотя бы поверхностно, плюсом будет если умеете писать миксины, функции. Еще мы используем методологию БЭМ, но только для формирование имен блоков, элементов и модификаторов.</p>
+                            <p>В нашем коллективе есть много нюансов и договоренностей по работе с версткой. И всему этому мы сможем вас обучить!</p>
+                        </div>
                     </div>
                 </div>
+                
+                <div class="development-tools__tab-section" data-tab-content="2">
+                    <div class="development-tools__item">
+                        <div class="development-tools__item-img">
+                            <img src="assets/img/tabs/dev3.jpg" alt="js">
+                        </div>
+                        <div class="development-tools__item-text">
+                            <h3>JavaScript</h3>
+                            <p>(JS) играет важную роль в работе ИТ-компаний и является одним из основных языков программирования в современной индустрии.</p>
+                            <p>Популярный язык программирования, который используется для создания интерактивных веб-сайтов и веб-приложений. Он был разработан компанией Netscape в 1995 году и стал одним из основных инструментов для разработки веб-контента.</p>
+                            <p>JS используется для добавления интерактивности на веб-страницы, таких как анимации, всплывающие окна, валидация форм и многое другое.</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="development-tools__tab-section" data-tab-content="3">
+                    <div class="development-tools__item">
+                        <div class="development-tools__item-img">
+                            <img src="assets/img/tabs/dev2.jpg" alt="Vue.js">
+                        </div>
+                        <div class="development-tools__item-text">
+                            <h3>Vue.js</h3>
+                            <p>Прогрессивный фреймворк для создания пользовательских интерфейсов. Он позволяет быстро создавать интерактивные веб-приложения с использованием компонентов и директив. 
+                                Фреймворк Vue.js был создан Эваном Ю (Evan You) и его командой в 2014 году.</p>
+                            <p>Vue.js имеет ряд преимуществ перед другими фреймворками, такими как Angular и React. Во-первых, Vue.</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="development-tools__tab-section" data-tab-content="4">
+                    <div class="development-tools__item">
+                        <div class="development-tools__item-img">
+                            <img src="assets/img/tabs/dev4.jpg" alt="js">
+                        </div>
+                        <div class="development-tools__item-text">
+                            <h3>Docker</h3>
+                            <p>Платформа для автоматизации развертывания, тестирования и доставки приложений в контейнерах. Она позволяет создавать и запускать приложения в изолированной среде, которая не зависит от операционной системы хоста. </p>
+                            <p>Docker был создан компанией Docker, Inc. в 2013 году.</p>
+                            <p>Docker используется для упрощения процесса разработки, тестирования и развертывания приложений.</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="development-tools__tab-section" data-tab-content="5">
+                    <div class="development-tools__item">
+                        <div class="development-tools__item-img">
+                            <img src="assets/img/tabs/dev6.jpg" alt="Bitrix">
+                        </div>
+                        <div class="development-tools__item-text">
+                            <h3>Bitrix</h3>
+                            <p>Куда же мы без Битрикс? На фоне импортозамещения в России, эта платформа обретает все большую популярность, а значит мы не можем обойти ее стороной.</p>
+                            <p>Bitrix позволяет создавать сайты различных типов, включая корпоративные, информационные, интернет-магазины и другие. </p>
+                            <p>Система имеет широкий функционал, включая управление контентом, SEO, маркетинг, e-commerce и многое другое. Bitrix является одной из самых популярных CMS в России и странах СНГ.</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="development-tools__tab-section" data-tab-content="6">
+                    <div class="development-tools__item">
+                        <div class="development-tools__item-img">
+                            <img src="assets/img/tabs/dev5.jpg" alt="Winter">
+                        </div>
+                        <div class="development-tools__item-text">
+                            <h3>Winter</h3>
+                            <p>На данный момент большинство новых сайтов для клиентов мы предлагаем на CMS Winter.</p>
+                            <p>Winter - это мощная и гибкая система управления контентом (CMS). Он построен с использованием фреймворка Laravel PHP и имеет современный, удобный интерфейс. Winter поддерживает широкий спектр функций, включая управление пользователями, создание контента и SEO-оптимизацию. Winter также легко настраивается, так что вы можете адаптировать его в соответствии с вашими конкретными потребностями. </p>
+                        </div>
+                    </div>
+                </div> 
             </div>
         </section>
         
@@ -141,7 +253,7 @@
                         <div class="faq__item-title-btn">
                             <svg xmlns="http://www.w3.org/2000/svg" width="60" height="61" viewBox="0 0 60 61" fill="none"><script xmlns=""/>
                                 <circle cx="30" cy="30.3723" r="29.5" stroke="#615081"/>
-                                <path d="M18 30.3723H41" stroke="#615081" stroke-width="1.5"/>
+                                <path d="M18 30.3723H41 M30 18.3723L30 41.3723" stroke="#615081" stroke-width="1.5"/>
                                 <script xmlns=""/>
                             </svg>
                         </div>
@@ -157,8 +269,7 @@
                         <div class="faq__item-title-btn">
                             <svg xmlns="http://www.w3.org/2000/svg" width="60" height="61" viewBox="0 0 60 61" fill="none"><script xmlns=""/>
                                 <circle cx="30" cy="30.3723" r="29.5" stroke="#615081"/>
-                                <path d="M18 30.3723H41" stroke="#615081" stroke-width="1.5"/>
-                                <path d="M30 18.3723L30 41.3723" stroke="#615081" stroke-width="1.5"/>
+                                <path d="M18 30.3723H41 M30 18.3723L30 41.3723" stroke="#615081" stroke-width="1.5"/>
                                 <script xmlns=""/>
                             </svg>
                         </div>
@@ -177,8 +288,7 @@
                         <div class="faq__item-title-btn">
                             <svg xmlns="http://www.w3.org/2000/svg" width="60" height="61" viewBox="0 0 60 61" fill="none"><script xmlns=""/>
                                 <circle cx="30" cy="30.3723" r="29.5" stroke="#615081"/>
-                                <path d="M18 30.3723H41" stroke="#615081" stroke-width="1.5"/>
-                                <path d="M30 18.3723L30 41.3723" stroke="#615081" stroke-width="1.5"/>
+                                <path d="M18 30.3723H41 M30 18.3723L30 41.3723" stroke="#615081" stroke-width="1.5"/>
                                 <script xmlns=""/>
                             </svg>
                         </div>
@@ -194,8 +304,7 @@
                         <div class="faq__item-title-btn">
                             <svg xmlns="http://www.w3.org/2000/svg" width="60" height="61" viewBox="0 0 60 61" fill="none"><script xmlns=""/>
                                 <circle cx="30" cy="30.3723" r="29.5" stroke="#615081"/>
-                                <path d="M18 30.3723H41" stroke="#615081" stroke-width="1.5"/>
-                                <path d="M30 18.3723L30 41.3723" stroke="#615081" stroke-width="1.5"/>
+                                <path d="M18 30.3723H41 M30 18.3723L30 41.3723" stroke="#615081" stroke-width="1.5"/>
                                 <script xmlns=""/>
                             </svg>
                         </div>
@@ -314,38 +423,47 @@
             <h2>Обсудим <br> <b>сотрудничество</b></h2>
             <div class="feedback-wrap">
                 <p class="h5 feedback__text">Узнать больше подробностей вы можете у наших специалистов,<br> заказав консультацию.</p>
-                <form action="/feedback" method="GET" class="feedback__form">
+                <form action="/feedback" method="GET" class="feedback__form" id="feedback-form">
                     <div class="feedback__inputs">
-                        <div class="feedback__col">
-                            <label class="feedback__input">
-                                <input type="text" id="name" placeholder="Ваше имя*" class="input-field">
+                        <div class="feedback__inputs-col">
+                            <label class="input">
+                                <div class="input-text">Ваше имя*</div>
+                                <input type="text" name="name" id="name" placeholder="Ваше имя*" class="input-field" data-required="true">
+                                <span class="input--error" data-validate-text="name"></span>
                             </label>
-                            <label class="feedback__input">
-                                <input type="text" id="phone" placeholder="+7       -         -     *" class="input-field">
+                            <label class="input">
+                                <div class="input-text">Ваш телефон*</div>
+                                <input type="text" name="phone" id="phone" placeholder="+7       -         -     *" class="input-field phonemask"  data-required="true">
+                                <span class="input--error" data-validate-text="phone"></span>
                             </label>
-                            <label class="feedback__input">
-                                <input type="email" id="email" placeholder="E-mail" class="input-field">
+                            <label class="input">
+                                <div class="input-text">E-mail</div>
+                                <input type="email" name="email" id="email" placeholder="E-mail" class="input-field">
+                                <span class="input--error" data-validate-text="email"></span>
                             </label>
                         </div>
-                        <div class="feedback__col">
-                            <label class="feedback__input">
-                                <textarea id="comment" class="input-field" placeholder="Комментарий"></textarea>
+                        <div class="feedback__inputs-col">
+                            <label class="input">
+                                <div class="input-text">Комментарий</div>
+                                <textarea id="comment" name="comment" class="input-field" placeholder="Комментарий"></textarea>
+                                <span class="input--error" data-validate-text="comment"></span>
                             </label>
                         </div>
                     </div>
                     <div class="feedback__agreement">
-                        <label class="feedback__input">
-                            <input type="checkbox" id="comment" class="input-field">
-                            <div class="feedback__agreement-box"></div>
+                        <label class="feedback__input input-checkbox">
+                            <input type="checkbox" id="agreement" class="input-field" checked>
+                            <div class="input-checkbox__box" tabindex="100"></div>
                         </label>
-                            <div class="feedback__agreement-text">
-                                <p>
-                                    Пользуясь сайтом или отправляя любые формы запросов, Вы соглашаетесь <br>с условиями 
-                                <a class="link" href="/assets/docs/policy.pdf">«Положения о конфиденциальности»</a>
-                                </p>
-                            </div>
+                        
+                        <div class="feedback__agreement-text">
+                            <p>
+                                Пользуясь сайтом или отправляя любые формы запросов, Вы соглашаетесь <br>с условиями 
+                            <a class="link--violet" href="/assets/docs/policy.pdf">«Положения о конфиденциальности»</a>
+                            </p>
+                        </div>
                     </div>
-                    <button class="btn form-button btn--violet" type="button">Отправить</button>
+                    <button class="btn form-button btn--violet" type="submit">Отправить</button>
                 </form>
             </div>
         </section>
@@ -423,17 +541,17 @@
                 </div>
                 <div class="footer__info-right">
                     <div class="footer__info-soc">
-                        <a href="footer__info-soc--vk">
+                        <a href="https://vk.com/analyticum_plus" class="footer__info-soc--vk">
                             <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" viewBox="0 0 30 30" fill="none"><script xmlns=""/>
                             <path fill-rule="evenodd" clip-rule="evenodd" d="M2.10883 2.10883C0 4.21766 0 7.61175 0 14.4V15.6C0 22.3883 0 25.7823 2.10883 27.8912C4.21766 30 7.61175 30 14.4 30H15.6C22.3883 30 25.7823 30 27.8912 27.8912C30 25.7823 30 22.3883 30 15.6V14.4C30 7.61175 30 4.21766 27.8912 2.10883C25.7823 0 22.3883 0 15.6 0H14.4C7.61175 0 4.21766 0 2.10883 2.10883ZM5.06262 9.12598C5.22512 16.926 9.12506 21.6135 15.9626 21.6135H16.3502V17.151C18.8627 17.401 20.7625 19.2385 21.525 21.6135H25.0751C24.1001 18.0635 21.5375 16.101 19.9375 15.351C21.5375 14.426 23.7875 12.176 24.325 9.12598H21.0999C20.3999 11.601 18.3252 13.851 16.3502 14.0635V9.12598H13.1251V17.776C11.1251 17.276 8.60012 14.851 8.48762 9.12598H5.06262Z" fill="white"/>
                             <script xmlns=""/></svg>
                         </a>
-                        <a href="footer__info-soc--youtube">
+                        <a href="https://www.youtube.com/channel/UCuNOhGENYxn1ft8U7fwKzlw" class="footer__info-soc--youtube">
                             <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" viewBox="0 0 30 30" fill="none"><script xmlns=""/>
                             <path fill-rule="evenodd" clip-rule="evenodd" d="M4.3064 0C1.92804 0 0 1.92804 0 4.3064V25.6936C0 28.072 1.92804 30 4.3064 30H25.6936C28.072 30 30 28.072 30 25.6936V4.3064C30 1.92804 28.072 0 25.6936 0H4.3064ZM24.6611 10.5396C24.5455 10.1187 24.3178 9.73462 24.0006 9.42571C23.6834 9.11679 23.288 8.89391 22.8538 8.77937C21.2556 8.36347 14.8673 8.36347 14.8673 8.36347C14.8673 8.36347 8.47901 8.36347 6.88078 8.77937C6.44662 8.89391 6.05117 9.11679 5.73399 9.42571C5.41682 9.73462 5.18905 10.1187 5.07347 10.5396C4.64604 12.093 4.64604 15.3325 4.64604 15.3325C4.64604 15.3325 4.64604 18.572 5.07347 20.1254C5.18905 20.5463 5.41682 20.9304 5.73399 21.2393C6.05117 21.5482 6.44662 21.7711 6.88078 21.8857C8.47901 22.3015 14.8673 22.3015 14.8673 22.3015C14.8673 22.3015 21.2556 22.3015 22.8538 21.8857C23.288 21.7711 23.6834 21.5482 24.0006 21.2393C24.3178 20.9304 24.5455 20.5463 24.6611 20.1254C25.0885 18.572 25.0885 15.3325 25.0885 15.3325C25.0885 15.3325 25.0885 12.093 24.6611 10.5396ZM12.7766 18.2741L18.1195 15.3325L12.7766 12.3909V18.2741Z" fill="white"/>
                             <script xmlns=""/></svg>
                         </a>
-                        <a href="footer__info-soc--tg">
+                        <a href="https://t.me/+79681188631" class="footer__info-soc--tg">
                             <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" viewBox="0 0 30 30" fill="none"><script xmlns=""/>
                             <path fill-rule="evenodd" clip-rule="evenodd" d="M30 15C30 23.2843 23.2843 30 15 30C6.71573 30 0 23.2843 0 15C0 6.71573 6.71573 0 15 0C23.2843 0 30 6.71573 30 15ZM15.5375 11.0741C14.0785 11.681 11.1626 12.937 6.78981 14.8421C6.07973 15.1245 5.70777 15.4007 5.6739 15.6708C5.61668 16.1273 6.18833 16.3071 6.96679 16.5519C7.07267 16.5852 7.18239 16.6197 7.29486 16.6562C8.06074 16.9052 9.09098 17.1964 9.62655 17.208C10.1124 17.2185 10.6546 17.0182 11.2532 16.6071C15.3389 13.8492 17.4479 12.4552 17.5803 12.4252C17.6737 12.404 17.8032 12.3773 17.8909 12.4553C17.9786 12.5332 17.97 12.6809 17.9607 12.7205C17.9041 12.9619 15.6601 15.0481 14.4988 16.1277C14.1368 16.4643 13.88 16.703 13.8275 16.7575C13.7099 16.8797 13.5901 16.9952 13.4749 17.1062C12.7634 17.7921 12.2298 18.3065 13.5045 19.1465C14.117 19.5501 14.6071 19.8839 15.0961 20.2169C15.6301 20.5806 16.1628 20.9433 16.852 21.3951C17.0275 21.5101 17.1952 21.6297 17.3585 21.7461C17.98 22.1892 18.5384 22.5872 19.2282 22.5238C19.629 22.4869 20.043 22.11 20.2533 20.9859C20.7502 18.3294 21.727 12.5735 21.9527 10.2017C21.9725 9.99387 21.9476 9.72792 21.9276 9.61118C21.9077 9.49443 21.8659 9.32809 21.7142 9.20496C21.5344 9.05913 21.257 9.02838 21.1329 9.03056C20.5687 9.0405 19.7031 9.34148 15.5375 11.0741Z" fill="white"/>
                             <script xmlns=""/></svg>
@@ -448,5 +566,64 @@
             </div>
         </section>
     </footer>
+
+    <div class="modal">
+        <div class="modal-feedback" id="modal-feedback">
+            <div class="modal-feedback__close" data-fancybox-close>
+                <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 21 21" fill="none"><script xmlns=""/>
+                <path d="M1.61523 19.3848L20 0.999989" stroke="white" stroke-width="2" stroke-linecap="round"/>
+                <path d="M1.61523 1L20 19.3848" stroke="white" stroke-width="2" stroke-linecap="round"/>
+                <script xmlns=""/></svg>
+            </div>
+            <div class="modal-feedback__title">
+                <h4>ПОЛУЧИТЬ КОНСУЛЬТАЦИЮ</h4>
+                <p>Заполните форму обратной связи</p>
+            </div>
+            <form action="/feedback" method="GET" class="modal-feedback__form">
+                <div class="modal-feedback__inputs">
+                    <label class="input">
+                        <div class="input-text">Ваше имя*</div>
+                        <input type="text" name="name" id="name" placeholder="Ваше имя*" class="input-field" data-required="true">
+                        <span class="input--error" data-validate-text="name"></span>
+                    </label>
+                    <label class="input">
+                        <div class="input-text">Ваш телефон*</div>
+                        <input type="text" name="phone" id="phone" placeholder="+7       -         -     *" class="input-field" data-required="true">
+                        <span class="input--error" data-validate-text="phone"></span>
+                    </label>
+                    <label class="input">
+                        <div class="input-text">Комментарий</div>
+                        <input type="text" name="comment" id="comment" placeholder="Комментарий*" class="input-field">
+                        <span class="input--error" data-validate-text="comment"></span>
+                    </label>
+                </div>
+                <div class="modal-feedback__agreement">
+                    <label class="input-checkbox">
+                        <input type="checkbox" id="agreement" checked>
+                        <div class="input-checkbox__box" tabindex="100"></div>
+                    </label>
+                    
+                    <div class="modal-feedback__agreement-text">
+                        <p>
+                            Пользуясь сайтом или отправляя любые формы запросов, Вы соглашаетесь с условиями 
+                        <a class="link--violet" href="/assets/docs/policy.pdf">«Положения о конфиденциальности»</a>
+                        </p>
+                    </div>
+                </div>
+                <button class="btn form-button btn--violet" type="submit">Отправить</button>
+            </form>
+            <a href="#modal-success" data-fancybox data-modal="true" class="btn btn--white">Тест</a>
+        </div>
+    </div>
+    <div class="modal">
+        <div class="modal-feedback--success" id="modal-success">
+            <h4>ВАША ЗАЯВКА ОТПРАВЛЕНА</h4>
+        </div>
+    </div>
+
+    <script src="assets/js/jquery.min.js"></script>
+    <script src="assets/js/jquery.maskedinput.min.js"></script>
+    <script src="assets/js/jquery.fancybox.min.js"></script>
+    <script src="assets/js/main.js" type="text/javascript"></script>
 </body>
 </html>

@@ -7,6 +7,8 @@ $(document).ready(function($)  {
         closeExisting: true,
         clickOutside: true,
         touch: false,
+        smallBtn: false,
+        toolbar: false
     })
 
     $('.phonemask').mask('+7 (999) 999-99-99');
@@ -90,24 +92,49 @@ $(document).ready(function($)  {
 
     $('form').on('submit', function() {
         event.preventDefault();
-        console.log('submit');
 
         let formData = $(this).find('.input-field');
+        let valid = true;
         $.each(formData, function(){
             let id = $(this).attr('id');
+            
             let validText = $(this).closest('form').find('[data-validate-text=' + id + "]")[0];
             if ($(this).attr('data-required') && $(this).val() == '') {
                 $(this).addClass('input__error');
                 $(this).closest('form').find('[data-validate-text=' + id + "]");
-                console.log($(this).closest('form').find('[data-validate-text=' + id + "]"));
                 if (validText) validText.innerHTML = 'Поле не заполнено';
+                valid = false;
             } else {
                 $(this).removeClass('input__error');
                 if (validText) validText.innerHTML = ' ';
             }
-
         });
+
+        if (valid !== false) {
+            $.fancybox.close();
+            $.fancybox.open({
+                src : '#modal-success'
+            });
+        }
     });
+
+    var swiper = new Swiper('.development-tools .swiper', {
+        spaceBetween: 20,
+        slidesPerView: 'auto',
+        watchOverflow: true,
+        setWrapperSize: true,
+        freeMode: true,
+        navigation: {
+          nextEl: '.development-tools .swiper-button-next',
+          prevEl: '.development-tools .swiper-button-prev',
+        },
+        breakpoints: {
+            768: {
+                spaceBetween: 40,
+            }
+        }
+      });
+  
 
 
     ymaps.ready(function () {

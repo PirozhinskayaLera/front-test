@@ -7,12 +7,7 @@
 }
 .swiper {
     overflow: hidden;
-
-    &-wrap {
-        position: relative;
-        width: 100%;
-        display: flex;
-    }
+    position: relative;
 
     &-slide {
         position: relative;
@@ -38,5 +33,9 @@
             max-width: 100%;
             width: 100%;
         }
+    }
+
+    &-wrapper {
+        height: auto;
     }
 }

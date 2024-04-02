@@ -134,6 +134,14 @@ $(document).ready(function($)  {
             }
         }
       });
+
+      var swiper1 = new Swiper('.slider .swiper', {
+        spaceBetween: 20,
+        slidesPerView: 2,
+        pagination: {
+            el: '.slider .swiper-pagination',
+          },
+      });
   
 
 

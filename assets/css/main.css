@@ -55,6 +55,7 @@ body {
   font-family: Montserrat, sans-serif;
   letter-spacing: 0.02em;
   color: #211041;
+  width: 100%;
 }
 
 input, textarea {
@@ -827,11 +828,7 @@ h5, .h5 {
 
 .swiper {
   overflow: hidden;
-}
-.swiper-wrap {
   position: relative;
-  width: 100%;
-  display: flex;
 }
 .swiper-slide {
   position: relative;
@@ -856,6 +853,9 @@ h5, .h5 {
     max-width: 100%;
     width: 100%;
   }
+}
+.swiper-wrapper {
+  height: auto;
 }
 
 .contacts h3 {

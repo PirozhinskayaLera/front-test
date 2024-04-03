@@ -1200,6 +1200,14 @@ h5, .h5 {
 .footer__info-soc a:not(:last-child) {
   margin-right: 20px;
 }
+.footer__info-soc svg path {
+  -webkit-transition: 0.2s;
+  -moz-transition: 0.2s;
+  transition: 0.2s;
+}
+.footer__info-soc svg:hover path {
+  fill: #D1C6DD;
+}
 
 .modal {
   display: flex;

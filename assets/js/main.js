@@ -91,6 +91,9 @@ $(document).ready(function($)  {
     });
 
     $('form').on('submit', function() {
+        let btn = $(this).find('.btn');
+        let btnText = btn.text();
+        btnLoading('start', btn);
         event.preventDefault();
 
         let formData = $(this).find('.input-field');
@@ -110,13 +113,31 @@ $(document).ready(function($)  {
             }
         });
 
-        if (valid !== false) {
-            $.fancybox.close();
-            $.fancybox.open({
-                src : '#modal-success'
-            });
-        }
+        setTimeout(function () {
+            if (valid !== false) {
+                formData.val('');
+                $.fancybox.close();
+                $.fancybox.open({
+                    src : '#modal-success'
+                });
+            }
+            btnLoading('finish', btn, btnText);
+        }, 1000)
+        
     });
+    var btnLoading = function (action, elem, text) {
+        console.log(elem);
+        if (action == 'start') {
+            elem.addClass('loading');
+            elem.html('<span class="loader__btn"></span><span class="loader__btn"></span><span class="loader__btn"></span>');
+            elem.find('.loader__btn').css('display', 'inline-block')
+        } else {
+            elem.removeClass('loading');
+            elem.text(text);
+            elem.find('.loader__btn').css('display', 'none')
+        }
+        
+    }
 
     var swiper = new Swiper('.development-tools .swiper', {
         spaceBetween: 20,

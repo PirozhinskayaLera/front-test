@@ -142,9 +142,7 @@ $(document).ready(function($)  {
     var swiper = new Swiper('.development-tools .swiper', {
         spaceBetween: 20,
         slidesPerView: 'auto',
-        watchOverflow: true,
         setWrapperSize: true,
-        freeMode: true,
         navigation: {
           nextEl: '.development-tools .swiper-button-next',
           prevEl: '.development-tools .swiper-button-prev',
@@ -152,6 +150,9 @@ $(document).ready(function($)  {
         breakpoints: {
             768: {
                 spaceBetween: 40,
+            },
+            1100: {
+                spaceBetween: 60,
             }
         }
       });

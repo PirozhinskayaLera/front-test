@@ -762,28 +762,12 @@ h5, .h5 {
   margin-bottom: 0;
 }
 .development-tools__nav-item {
-  margin-right: 60px;
   padding-bottom: 18px;
   margin-bottom: 40px;
   cursor: pointer;
 }
-@media screen and (max-width: 768px) {
-  .development-tools__nav-item {
-    margin-right: 40px;
-  }
-}
 .development-tools__nav .active {
   border-bottom: 6px solid #BD4CC8;
-}
-.development-tools__nav .swiper-slide {
-  text-align: center;
-  font-size: 18px;
-  background: none;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  width: auto;
-  height: auto;
 }
 .development-tools__item {
   display: flex;
@@ -836,6 +820,61 @@ h5, .h5 {
 }
 .development-tools__tab-section {
   display: none;
+}
+.development-tools .swiper-slide {
+  text-align: center;
+  font-size: 18px;
+  background: none;
+  display: flex;
+  justify-content: center;
+  align-items: start;
+  width: auto;
+  height: auto;
+}
+.development-tools .swiper-slide :last-child {
+  margin-right: 0 !important;
+}
+.development-tools .swiper-button-container {
+  position: absolute;
+  background-color: #615081;
+  right: 0;
+  top: 0;
+  z-index: 10;
+  height: 45px;
+  width: 100px;
+}
+.development-tools .swiper-button-prev {
+  right: 44px;
+  left: auto;
+}
+.development-tools .swiper-button-prev::after {
+  content: "";
+  font-family: inherit;
+}
+.development-tools .swiper-button-next {
+  right: 0;
+}
+.development-tools .swiper-button-next::after {
+  content: "";
+  font-family: inherit;
+}
+.development-tools .swiper-button-next, .development-tools .swiper-button-prev {
+  width: 40px;
+  height: 40px;
+  border: 1.5px solid #BD4CC8;
+}
+.development-tools .swiper-button-next svg, .development-tools .swiper-button-prev svg {
+  width: auto;
+  height: auto;
+}
+.development-tools .swiper-button-next path, .development-tools .swiper-button-prev path {
+  stroke: #BD4CC8;
+}
+.development-tools .swiper-button-disabled {
+  border: 1.5px solid #D1C6DD;
+}
+.development-tools .swiper-button-disabled path {
+  stroke: #D1C6DD;
 }
 
 .faq h3 {

@@ -857,6 +857,20 @@ h5, .h5 {
 .swiper-wrapper {
   height: auto;
 }
+.swiper-pagination {
+  position: static;
+  margin-top: 30px;
+}
+.swiper-pagination-bullet {
+  width: 67px;
+  height: 6px;
+  border-radius: 3px;
+  background: #D1C6DD;
+  opacity: 1;
+}
+.swiper-pagination-bullet-active {
+  background: #BD4CC8;
+}
 
 .contacts h3 {
   margin-bottom: 60px;

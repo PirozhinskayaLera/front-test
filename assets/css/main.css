@@ -51,6 +51,15 @@
   transition: 0.2s;
 }
 
+::-webkit-scrollbar {
+  background-color: #473667;
+  width: 10px;
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: #BD4CC8;
+}
+
 body {
   font-family: Montserrat, sans-serif;
   letter-spacing: 0.02em;
@@ -74,8 +83,36 @@ a:hover {
   color: #BD4CC8;
 }
 
+.loader__btn {
+  display: none;
+  border-radius: 100%;
+  border: 1px solid #615081;
+  background-color: #615081;
+  width: 4px;
+  height: 4px;
+}
+.loader__btn:not(:last-child) {
+  margin-right: 12px;
+}
+.loader__btn:nth-child(1) {
+  animation: preloader 0.6s ease-in-out alternate infinite;
+}
+.loader__btn:nth-child(2) {
+  animation: preloader 0.6s ease-in-out alternate 0.2s infinite;
+}
+.loader__btn:nth-child(3) {
+  animation: preloader 0.6s ease-in-out alternate 0.4s infinite;
+}
+@keyframes preloader {
+  100% {
+    transform: scale(1.5);
+  }
+}
+
 .btn {
-  display: inline-block;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   padding: 20px 30px;
   font-weight: 400;
   border: 1.5px solid #615081;
@@ -84,16 +121,30 @@ a:hover {
   -webkit-transition: 0.2s;
   -moz-transition: 0.2s;
   transition: 0.2s;
+  text-align: center;
+  min-height: 59px;
 }
 @media screen and (max-width: 1600px) {
   .btn {
     min-width: 176px;
   }
 }
+.btn .loader__btn {
+  background-color: #D1C6DD;
+  border-color: #D1C6DD;
+}
+.btn.loading {
+  pointer-events: none;
+  border-color: #D1C6DD;
+  outline: none;
+}
 .btn--violet {
-  display: inline-block;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   font-size: 16px;
   min-width: 200px;
+  min-height: 72px;
   color: #FFFFFF;
   background-color: #BD4CC8;
   border-color: #BD4CC8;
@@ -117,6 +168,16 @@ a:hover {
   background-color: #D1C6DD;
   border-color: #D1C6DD;
   pointer-events: none;
+}
+.btn--violet .loader__btn {
+  background-color: #615081;
+  border-color: #615081;
+}
+.btn--violet.loading {
+  pointer-events: none;
+  border-color: #D1C6DD;
+  background-color: #D1C6DD;
+  outline: none;
 }
 .btn--white:hover, .btn--white :active {
   color: #BD4CC8;
@@ -1152,6 +1213,14 @@ h5, .h5 {
 }
 .footer__info-soc a:not(:last-child) {
   margin-right: 20px;
+}
+.footer__info-soc svg path {
+  -webkit-transition: 0.2s;
+  -moz-transition: 0.2s;
+  transition: 0.2s;
+}
+.footer__info-soc svg:hover path {
+  fill: #D1C6DD;
 }
 
 .modal {

@@ -18,6 +18,14 @@
 	transition: 0.2s;
 }
 
+::-webkit-scrollbar {
+	background-color: $color-violet;
+	width: 10px;
+}
+::-webkit-scrollbar-thumb {
+	background-color: $color-brightly-violet;
+}
+
 body {
 	font-family: Montserrat, sans-serif;
 	letter-spacing: calc(1em / 50);
@@ -41,8 +49,41 @@ a{
 	}
 }
 
+.loader {
+	&__btn {
+		display: none;
+		border-radius: 100%;
+		border: 1px solid $color-light-violet;
+		background-color: $color-light-violet;
+		width: 4px;
+		height: 4px;
+
+		&:not(:last-child) {
+			margin-right: 12px;
+		}
+
+		&:nth-child(1) {
+			animation: preloader .6s ease-in-out alternate infinite;
+		}
+
+		&:nth-child(2) {
+			animation: preloader .6s ease-in-out alternate .2s infinite;
+		}
+
+		&:nth-child(3) {
+			animation: preloader .6s ease-in-out alternate .4s infinite;
+		}
+
+		@keyframes preloader {
+			100% { transform: scale(1.5); }
+		}
+	}
+}
+
 .btn {
-	display: inline-block;
+	display: flex;
+	align-items: center;
+	justify-content: center;
 	padding: 20px 30px;
 	font-weight: 400;
 	border: 1.5px solid $color-light-violet;
@@ -51,15 +92,31 @@ a{
 	-webkit-transition: 0.2s;
     -moz-transition: 0.2s;
 	transition: 0.2s;
+	text-align: center;
+	min-height: 59px;
 
 	@media screen and (max-width: 1600px) {
 		min-width: 176px;
 	}
 
+	.loader__btn {
+		background-color: $color-grey;
+		border-color: $color-grey;
+	} 
+
+	&.loading {
+		pointer-events: none;
+		border-color: $color-grey;
+		outline: none;
+	}
+
 	&--violet{
-		display: inline-block;
+		display: flex;
+		align-items: center;
+		justify-content: center;
 		font-size: 16px;
 		min-width: 200px;
+		min-height: 72px;
 		@include btnColor($color, $color-brightly-violet, $color-brightly-violet);
 		box-shadow: 0px 7px 30px 0px $shadow;
 		padding: 20px 55px;
@@ -81,6 +138,18 @@ a{
 		&:disabled {
 			@include btnColor($color-light-violet, $color-grey, $color-grey);
 			pointer-events: none;
+		}
+
+		.loader__btn {
+			background-color: $color-light-violet;
+			border-color: $color-light-violet;
+		}
+
+		&.loading {
+			pointer-events: none;
+			border-color: $color-grey;
+			background-color: $color-grey;
+			outline: none;
 		}
 	}
 

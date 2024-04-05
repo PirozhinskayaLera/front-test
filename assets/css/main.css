@@ -262,10 +262,12 @@ h2, .h2 {
   margin-bottom: 80px;
   text-transform: uppercase;
   color: #211041;
+  line-height: 72px;
 }
 @media screen and (max-width: 1600px) {
   h2, .h2 {
     font-size: 40px;
+    line-height: 48px;
   }
 }
 @media screen and (max-width: 1100px) {
@@ -289,10 +291,12 @@ h3, .h3 {
   font-size: 40px;
   font-weight: 600;
   margin-bottom: 40px;
+  line-height: 48px;
 }
 @media screen and (max-width: 1600px) {
   h3, .h3 {
     font-size: 30px;
+    line-height: 36px;
   }
 }
 @media screen and (max-width: 480px) {
@@ -645,12 +649,12 @@ h5, .h5 {
 .maximum__advantages-item--head {
   display: flex;
   flex-direction: column;
-  margin-bottom: 40px;
 }
 @media screen and (max-width: 768px) {
   .maximum__advantages-item--head {
     flex-direction: row;
     align-items: center;
+    margin-bottom: 40px;
   }
 }
 .maximum__advantages-item--head img {
@@ -710,7 +714,6 @@ h5, .h5 {
 }
 @media screen and (max-width: 1600px) {
   .acquaintance-left {
-    min-width: 545px;
     padding-top: 28px;
   }
 }
@@ -730,15 +733,27 @@ h5, .h5 {
 }
 .acquaintance-left p {
   font-size: 16px;
+  line-height: 19.2px;
+}
+.acquaintance-left p:not(:last-child) {
   margin-bottom: 20px;
-  font-weight: 400;
+}
+.acquaintance-right {
+  max-width: 50%;
+  display: flex;
+}
+@media screen and (max-width: 1600px) {
+  .acquaintance-right {
+    align-items: center;
+  }
 }
 .acquaintance-right img {
   width: auto;
+  max-height: 542px;
 }
-@media screen and (max-width: 1450px) {
+@media screen and (max-width: 1600px) {
   .acquaintance-right img {
-    height: 80%;
+    max-height: 490px;
   }
 }
 @media screen and (max-width: 768px) {

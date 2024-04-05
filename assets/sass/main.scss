@@ -224,9 +224,11 @@ h2, .h2 {
 	@include text(60px, 300, 80px);
 	text-transform: uppercase;
 	color: $color-black-violet;
+	line-height: 72px;
 
 	@media screen and (max-width: 1600px) {
 		font-size: 40px;
+		line-height: 48px;
 	}
 
 	@media screen and (max-width: 1100px) {
@@ -244,9 +246,11 @@ h2, .h2 {
 
 h3, .h3 {
 	@include text(40px, 600, 40px);
+	line-height: 48px;
 
 	@media screen and (max-width: 1600px) {
 		font-size: 30px;
+		line-height: 36px;
 	}
 
 	@media screen and (max-width: 480px) {

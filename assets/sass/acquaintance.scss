@@ -19,7 +19,7 @@
         margin-right: 40px;
 
         @media screen and (max-width: 1600px) {
-            min-width: 545px;
+            // min-width: 545px;
             padding-top: 28px;
         }
         @media screen and (max-width: 1100px) {
@@ -36,18 +36,28 @@
 
         p {
             font-size: 16px;
-            margin-bottom: 20px;
-            font-weight: 400;
+            line-height: 19.2px;
+
+            &:not(:last-child) {
+               margin-bottom: 20px; 
+            }
         }
     }
 
     &-right {
+        max-width: 50%;
+        display: flex;
+
+        @media screen and (max-width: 1600px) {
+            align-items: center;
+        }
+
         img {
             width: auto;
+            max-height: 542px;
 
-            @media screen and (max-width: 1450px)
-            {
-                height: 80%;
+            @media screen and (max-width: 1600px) {
+                max-height: 490px;
             }
 
             @media screen and (max-width: 768px) {

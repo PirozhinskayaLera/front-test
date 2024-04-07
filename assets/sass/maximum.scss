@@ -8,6 +8,10 @@
             flex-direction: column;
         }
 
+        @media screen and (max-width: 1000px) {
+            flex-wrap: wrap;
+        }
+
         &-item {
             width: 365px;
             // min-width: 365px;
@@ -17,6 +21,20 @@
             border: 1px solid $color-grey;
             margin-right: 20px;
             word-break: break-word;
+
+            @media screen and (max-width: 1000px) {
+                width: 48%;
+                margin-right: 0;
+
+                &:nth-child(1), &:nth-child(2) {
+                    margin-bottom: 20px;
+                }
+
+                &:nth-child(1), &:nth-child(3) {
+                    margin-right: 20px;
+                }
+
+            }
 
             @media screen and (max-width: 768px) {
                 width: 100%;

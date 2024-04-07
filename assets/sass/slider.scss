@@ -33,6 +33,11 @@
             max-width: 100%;
             width: 100%;
         }
+
+        @media screen and (max-width: 480px)
+        {
+            max-height: 256px;
+        }
     }
 
     &-wrapper {
@@ -41,16 +46,37 @@
 
     &-pagination {
         position: static;
-        margin-top: 30px;
+        transform: none !important;
+        margin: 30px auto 0 auto;
+        width: 100% !important;
+        display: flex;
+        justify-content: center;
         &-bullet {
             width: 67px;
             height: 6px;
             border-radius: 3px;
             background: $color-grey;
-            opacity: 1;
+            opacity: 0;
+            // display: none;
 
             &-active {
                 background: $color-brightly-violet;
+
+                &-prev, &-prev-prev, &-next, &-next-next  {
+                //    width: 6px;
+                //    display: inline-block;
+                    opacity: 0;
+                }
+
+                &-prev, &-next {
+                    opacity: 1;
+                }
+
+                &-main {
+                    opacity: 1;
+                    // display: inline-block;
+                    // left: 16px !important;
+                }
             }
         }
     }

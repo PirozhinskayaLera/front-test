@@ -26,8 +26,9 @@
     &__item {
         display: flex;
         flex-direction: row;
+        min-height: 524px;
 
-        @media screen and (max-width: 768px) {
+        @media screen and (max-width: 1000px) {
             flex-direction: column;
 
             & > div {
@@ -39,12 +40,21 @@
             width: 50%;
             max-width: 760px;
             max-height: 524px;
+
+            @media screen and (max-width: 1000px) {
+                max-width: 100%;
+            }
             
             img{
                 object-fit: cover;
 
-                @media screen and (max-width: 768px) {
+                @media screen and (max-width: 1000px) {
                     max-height: inherit;
+                    min-height: 524px; 
+                }
+
+                @media screen and (max-width: 550px) {
+                    min-height: 280px;
                 }
             }
         }
@@ -56,8 +66,9 @@
             color: $color-light;
             width: 50%;
 
-            @media screen and (max-width: 768px) {
+            @media screen and (max-width: 1000px) {
                 padding: 40px 0 0;
+                max-width: 100%;
             }
 
             p {
@@ -106,7 +117,7 @@
                 right: 0;
                 top: 0;
                 z-index: 10;
-                height: 45px;
+                height: 46px;
                 width: 100px;
             }
             &-prev {
@@ -147,6 +158,5 @@
                 }
             }
         }
-        
       }
 }

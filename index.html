@@ -12,7 +12,7 @@
 <body>
     <header class="header">
         <div class="header__wrap">
-            <a href="/" class="header__logo">
+            <a href="" class="header__logo">
                 <img src="assets/img/logo.svg" alt="Тестовое задание">
             </a>
             <div class="header__hamburger">
@@ -25,7 +25,7 @@
                     <ul class="header__menu-list">
                         <li class="header__menu-item"><a href="#acquaintance">Знакомство</a></li>
                         <li class="header__menu-item"><a href="#maximum">Максимум</a></li>
-                        <li class="header__menu-item"><a href="#faq">Вопрос&nbsp;/&nbsp;Ответ</a></li>
+                        <li class="header__menu-item"><a href="#faq"><nobr>Вопрос/Ответ</nobr></a></li>
                         <li class="header__menu-item"><a href="#contacts">Контакты</a></li>
                     </ul>
                 </nav>
@@ -46,7 +46,7 @@
                     <ul class="header__mobile-menu-list">
                         <li class="header__mobile-menu-item"><a href="#acquaintance">Знакомство</a></li>
                         <li class="header__mobile-menu-item"><a href="#maximum">Максимум</a></li>
-                        <li class="header__mobile-menu-item"><a href="#faq"><nobr>Вопрос/Ответ</nobr></a></li>
+                        <li class="header__mobile-menu-item"><a href="#faq">Вопрос/Ответ</a></li>
                         <li class="header__mobile-menu-item"><a href="#contacts">Контакты</a></li>
                     </ul>
                 </nav>
@@ -178,7 +178,7 @@
                 <div class="development-tools__tab-section" data-tab-content="1">
                     <div class="development-tools__item">
                         <div class="development-tools__item-img">
-                            <img src="assets/img/tabs/dev1.jpg" alt="Верстка">
+                            <img src="assets/img/tabs/dev5.jpg" alt="Верстка">
                         </div>
                         <div class="development-tools__item-text">
                             <h3>Верстка</h3>
@@ -194,7 +194,7 @@
                 <div class="development-tools__tab-section" data-tab-content="2">
                     <div class="development-tools__item">
                         <div class="development-tools__item-img">
-                            <img src="assets/img/tabs/dev3.jpg" alt="js">
+                            <img src="assets/img/tabs/dev1.jpg" alt="js">
                         </div>
                         <div class="development-tools__item-text">
                             <h3>JavaScript</h3>
@@ -208,7 +208,7 @@
                 <div class="development-tools__tab-section" data-tab-content="3">
                     <div class="development-tools__item">
                         <div class="development-tools__item-img">
-                            <img src="assets/img/tabs/dev2.jpg" alt="Vue.js">
+                            <img src="assets/img/tabs/dev4.jpg" alt="Vue.js">
                         </div>
                         <div class="development-tools__item-text">
                             <h3>Vue.js</h3>
@@ -222,7 +222,7 @@
                 <div class="development-tools__tab-section" data-tab-content="4">
                     <div class="development-tools__item">
                         <div class="development-tools__item-img">
-                            <img src="assets/img/tabs/dev4.jpg" alt="js">
+                            <img src="assets/img/tabs/dev2.jpg" alt="js">
                         </div>
                         <div class="development-tools__item-text">
                             <h3>Docker</h3>
@@ -250,7 +250,7 @@
                 <div class="development-tools__tab-section" data-tab-content="6">
                     <div class="development-tools__item">
                         <div class="development-tools__item-img">
-                            <img src="assets/img/tabs/dev5.jpg" alt="Winter">
+                            <img src="assets/img/tabs/dev3.jpg" alt="Winter">
                         </div>
                         <div class="development-tools__item-text">
                             <h3>Winter</h3>
@@ -359,9 +359,15 @@
                     <div class="swiper-slide">
                         <img src="assets/img/slider/img6.jpg" alt="ИИ">
                     </div>
+                    <div class="swiper-slide">
+                        <img src="assets/img/slider/img7.jpg" alt="ИИ">
+                    </div>
+                    <div class="swiper-slide">
+                        <img src="assets/img/slider/img8.png" alt="ИИ">
+                    </div>
                 </div>
                 <!-- If we need pagination -->
-                <div class="swiper-pagination"></div>
+                <div class="swiper-pagination" style="width: 100%;"></div>
             </div>
         </section>
         
@@ -483,7 +489,10 @@
                         </div>
                     </div>
                     <button class="btn form-button btn--violet" type="submit">
-                        Отправить
+                        <span class="loader__btn"></span>
+                        <span class="loader__btn"></span>
+                        <span class="loader__btn"></span>
+                        <span class="text">Отправить</span> 
                     </button>
                 </form>
             </div>
@@ -582,7 +591,6 @@
                         <a href="assets/docs/policy.pdf" target="_blank">Политика конфиденциальности</a>
                         <span class="footer__info-cop">ООО «AnalyticumPlus» © 2024</span>
                     </div>
-                    
                 </div>
             </div>
         </section>
@@ -634,7 +642,10 @@
                     </div>
                 </div>
                 <button class="btn form-button btn--violet" type="submit">
-                    Отправить
+                    <span class="loader__btn"></span>
+                    <span class="loader__btn"></span>
+                    <span class="loader__btn"></span>
+                    <span class="text">Отправить</span> 
                 </button>
             </form>
         </div>

@@ -93,7 +93,7 @@ $(document).ready(function($)  {
     $('form').on('submit', function() {
         let btn = $(this).find('.btn');
         let btnText = btn.text();
-        btnLoading('start', btn);
+        
         event.preventDefault();
 
         let formData = $(this).find('.input-field');
@@ -113,27 +113,30 @@ $(document).ready(function($)  {
             }
         });
 
+        if (valid === false) {
+            return;
+        }
+
+        btnLoading('start', btn);
         setTimeout(function () {
-            if (valid !== false) {
-                formData.val('');
+            formData.val('');
                 $.fancybox.close();
                 $.fancybox.open({
                     src : '#modal-success'
                 });
-            }
-            btnLoading('finish', btn, btnText);
-        }, 1000)
+            btnLoading('finish', btn);
+        }, 3000)
         
     });
-    var btnLoading = function (action, elem, text) {
-        console.log(elem);
+
+    var btnLoading = function (action, elem) {
         if (action == 'start') {
             elem.addClass('loading');
-            elem.html('<span class="loader__btn"></span><span class="loader__btn"></span><span class="loader__btn"></span>');
+            elem.find('.text').css('display', 'none');
             elem.find('.loader__btn').css('display', 'inline-block')
         } else {
             elem.removeClass('loading');
-            elem.text(text);
+            elem.find('.text').css('display', 'inline');
             elem.find('.loader__btn').css('display', 'none')
         }
         
@@ -160,10 +163,23 @@ $(document).ready(function($)  {
       var swiper1 = new Swiper('.slider .swiper', {
         spaceBetween: 20,
         slidesPerView: 2,
+        slidesPerGroup: 2,
         pagination: {
             el: '.slider .swiper-pagination',
-            clickable: true,
+            // clickable: true,
+            dynamicBullets: true,
+            dynamicMainBullets: 4
           },
+        breakpoints: {
+            320: {
+                slidesPerView: 1,
+                slidesPerGroup: 1,
+            },
+            768: {
+                slidesPerView: 2,
+                slidesPerGroup: 2,
+            },
+        }
       });
   
 

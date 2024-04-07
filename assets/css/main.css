@@ -137,6 +137,7 @@ a:hover {
   pointer-events: none;
   border-color: #D1C6DD;
   outline: none;
+  box-shadow: none;
 }
 .btn--violet {
   display: flex;
@@ -178,6 +179,7 @@ a:hover {
   border-color: #D1C6DD;
   background-color: #D1C6DD;
   outline: none;
+  box-shadow: none;
 }
 .btn--white:hover, .btn--white :active {
   color: #BD4CC8;
@@ -242,6 +244,11 @@ h1, .h1 {
   h1, .h1 {
     font-size: 60px;
     line-height: 72px;
+  }
+}
+@media screen and (max-width: 550px) {
+  h1, .h1 {
+    font-size: 50px;
   }
 }
 @media screen and (max-width: 480px) {
@@ -625,6 +632,11 @@ h5, .h5 {
     flex-direction: column;
   }
 }
+@media screen and (max-width: 1000px) {
+  .maximum__advantages {
+    flex-wrap: wrap;
+  }
+}
 .maximum__advantages-item {
   width: 365px;
   display: flex;
@@ -633,6 +645,18 @@ h5, .h5 {
   border: 1px solid #D1C6DD;
   margin-right: 20px;
   word-break: break-word;
+}
+@media screen and (max-width: 1000px) {
+  .maximum__advantages-item {
+    width: 48%;
+    margin-right: 0;
+  }
+  .maximum__advantages-item:nth-child(1), .maximum__advantages-item:nth-child(2) {
+    margin-bottom: 20px;
+  }
+  .maximum__advantages-item:nth-child(1), .maximum__advantages-item:nth-child(3) {
+    margin-right: 20px;
+  }
 }
 @media screen and (max-width: 768px) {
   .maximum__advantages-item {
@@ -760,6 +784,7 @@ h5, .h5 {
   .acquaintance-right img {
     height: 100%;
     width: 100%;
+    max-height: inherit;
   }
 }
 
@@ -787,8 +812,9 @@ h5, .h5 {
 .development-tools__item {
   display: flex;
   flex-direction: row;
+  min-height: 524px;
 }
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 1000px) {
   .development-tools__item {
     flex-direction: column;
   }
@@ -801,12 +827,23 @@ h5, .h5 {
   max-width: 760px;
   max-height: 524px;
 }
+@media screen and (max-width: 1000px) {
+  .development-tools__item-img {
+    max-width: 100%;
+  }
+}
 .development-tools__item-img img {
   object-fit: cover;
 }
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 1000px) {
   .development-tools__item-img img {
     max-height: inherit;
+    min-height: 524px;
+  }
+}
+@media screen and (max-width: 550px) {
+  .development-tools__item-img img {
+    min-height: 280px;
   }
 }
 .development-tools__item-text {
@@ -816,9 +853,10 @@ h5, .h5 {
   color: #EFECF6;
   width: 50%;
 }
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 1000px) {
   .development-tools__item-text {
     padding: 40px 0 0;
+    max-width: 100%;
   }
 }
 .development-tools__item-text p {
@@ -855,7 +893,7 @@ h5, .h5 {
   right: 0;
   top: 0;
   z-index: 10;
-  height: 45px;
+  height: 46px;
   width: 100px;
 }
 .development-tools .swiper-button-prev {
@@ -919,6 +957,7 @@ h5, .h5 {
 }
 .faq__item-title-btn {
   cursor: pointer;
+  margin-left: 20px;
 }
 .faq__item-content {
   max-width: 890px;
@@ -969,22 +1008,40 @@ h5, .h5 {
     width: 100%;
   }
 }
+@media screen and (max-width: 480px) {
+  .swiper-slide {
+    max-height: 256px;
+  }
+}
 .swiper-wrapper {
   height: auto;
 }
 .swiper-pagination {
   position: static;
-  margin-top: 30px;
+  transform: none !important;
+  margin: 30px auto 0 auto;
+  width: 100% !important;
+  display: flex;
+  justify-content: center;
 }
 .swiper-pagination-bullet {
   width: 67px;
   height: 6px;
   border-radius: 3px;
   background: #D1C6DD;
-  opacity: 1;
+  opacity: 0;
 }
 .swiper-pagination-bullet-active {
   background: #BD4CC8;
+}
+.swiper-pagination-bullet-active-prev, .swiper-pagination-bullet-active-prev-prev, .swiper-pagination-bullet-active-next, .swiper-pagination-bullet-active-next-next {
+  opacity: 0;
+}
+.swiper-pagination-bullet-active-prev, .swiper-pagination-bullet-active-next {
+  opacity: 1;
+}
+.swiper-pagination-bullet-active-main {
+  opacity: 1;
 }
 
 .contacts h3 {
@@ -1016,6 +1073,11 @@ h5, .h5 {
   .contacts__cart {
     min-height: 398px;
     max-width: 100%;
+  }
+}
+@media screen and (max-width: 480px) {
+  .contacts__cart {
+    min-height: 230px;
   }
 }
 .contacts__info {
@@ -1327,6 +1389,11 @@ h5, .h5 {
   text-align: center;
   padding: 0 40px;
 }
+@media screen and (max-width: 480px) {
+  .modal-feedback__form {
+    padding: 0;
+  }
+}
 .modal-feedback__close {
   text-align: right;
   margin-bottom: 20px;
@@ -1348,6 +1415,9 @@ h5, .h5 {
   font-weight: 700;
   color: #FFFFFF;
   line-height: 24px;
+}
+.modal-feedback .btn {
+  margin: auto;
 }
 
 .input-checkbox {

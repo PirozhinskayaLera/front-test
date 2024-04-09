@@ -6,6 +6,12 @@
         color: $color;
     }
 
+    @media screen and (max-width: 768px) {  
+        .btn {
+            width: 100%;
+        }
+    }
+
     &-wrap {
         display: flex;
         flex-direction: column;

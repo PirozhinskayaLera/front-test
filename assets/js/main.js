@@ -92,7 +92,6 @@ $(document).ready(function($)  {
 
     $('form').on('submit', function() {
         let btn = $(this).find('.btn');
-        let btnText = btn.text();
         
         event.preventDefault();
 
@@ -104,12 +103,19 @@ $(document).ready(function($)  {
             let validText = $(this).closest('form').find('[data-validate-text=' + id + "]")[0];
             if ($(this).attr('data-required') && $(this).val() == '') {
                 $(this).addClass('input__error');
-                $(this).closest('form').find('[data-validate-text=' + id + "]");
                 if (validText) validText.innerHTML = 'Поле не заполнено';
                 valid = false;
             } else {
-                $(this).removeClass('input__error');
-                if (validText) validText.innerHTML = ' ';
+                let checkEmail = $(this).attr('type') == 'email';
+                let patternEmail = /^\b[A-Z0-9._%-]+@[A-Z0-9.-]+\.[A-Z]{2,4}\b$/i;
+                if (checkEmail && $(this).val() !== '' && !patternEmail.test($(this).val())) {
+                    $(this).addClass('input__error');
+                    if (validText) validText.innerHTML = 'Некорректное значение';
+                    valid = false;
+                } else {
+                    $(this).removeClass('input__error');
+                    if (validText) validText.innerHTML = ' ';
+                }
             }
         });
 
@@ -117,6 +123,7 @@ $(document).ready(function($)  {
             return;
         }
 
+        //request
         btnLoading('start', btn);
         setTimeout(function () {
             formData.val('');
@@ -166,9 +173,10 @@ $(document).ready(function($)  {
         slidesPerGroup: 2,
         pagination: {
             el: '.slider .swiper-pagination',
-            // clickable: true,
+            clickable: true,
             dynamicBullets: true,
-            dynamicMainBullets: 4
+            dynamicMainBullets: 4,
+            type: 'bullets'
           },
         breakpoints: {
             320: {
@@ -192,7 +200,7 @@ $(document).ready(function($)  {
                     // Своё изображение иконки метки.
                     iconImageHref: 'assets/img/icons/point.svg',
                     // Размеры метки.
-                    iconImageSize: [48, 48],
+                    iconImageSize: [58, 71],
                     // Смещение левого верхнего угла иконки относительно
                     // её "ножки" (точки привязки).
                     iconImageOffset: [-5, -38]

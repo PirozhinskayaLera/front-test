@@ -84,6 +84,10 @@
 
         img {
             width: auto;
+
+            @media screen and (max-width: 480px) {
+                height: 23px;
+            }
         }
     }
 
@@ -176,11 +180,15 @@
             }
     
             &-item{
-                padding: 40px 0;
+                // padding: 40px 0;
                 border-bottom: 1px solid $color-grey;
                 font-size: 20px;
                 font-weight: 500;
                 line-height: 26px;
+
+                display: flex;
+                align-items: center;
+                height: 94px;
             }
         }
         &-info{
@@ -189,6 +197,7 @@
             height: 100%;
             justify-content: end;
             align-items: center;
+            margin-top: 200px;
     
             &-contact{
                 display: flex;

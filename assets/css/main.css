@@ -14,6 +14,13 @@
 }
 @font-face {
   font-family: "Montserrat";
+  font-style: normal;
+  font-weight: 500;
+  font-display: swap;
+  src: local("Montserrat"), url("../fonts/Montserrat-Medium.woff2") format("woff2");
+}
+@font-face {
+  font-family: "Montserrat";
   font-style: italic;
   font-weight: 600;
   font-display: swap;
@@ -62,7 +69,6 @@
 
 body {
   font-family: Montserrat, sans-serif;
-  letter-spacing: 0.02em;
   color: #211041;
   width: 100%;
 }
@@ -92,7 +98,7 @@ a:hover {
   height: 4px;
 }
 .loader__btn:not(:last-child) {
-  margin-right: 12px;
+  margin: 0 6px;
 }
 .loader__btn:nth-child(1) {
   animation: preloader 0.6s ease-in-out alternate infinite;
@@ -309,7 +315,7 @@ h3, .h3 {
 @media screen and (max-width: 480px) {
   h3, .h3 {
     font-size: 24px;
-    line-height: 28.8x;
+    line-height: 28.8px;
   }
 }
 
@@ -443,6 +449,11 @@ h5, .h5 {
 .header__logo img {
   width: auto;
 }
+@media screen and (max-width: 480px) {
+  .header__logo img {
+    height: 23px;
+  }
+}
 .header__inner {
   display: flex;
   width: 100%;
@@ -524,11 +535,13 @@ h5, .h5 {
   list-style: none;
 }
 .header__mobile-menu-item {
-  padding: 40px 0;
   border-bottom: 1px solid #D1C6DD;
   font-size: 20px;
   font-weight: 500;
   line-height: 26px;
+  display: flex;
+  align-items: center;
+  height: 94px;
 }
 .header__mobile-info {
   display: flex;
@@ -536,6 +549,7 @@ h5, .h5 {
   height: 100%;
   justify-content: end;
   align-items: center;
+  margin-top: 200px;
 }
 .header__mobile-info-contact {
   display: flex;
@@ -586,6 +600,11 @@ h5, .h5 {
   }
   .main-banner > div {
     width: 100%;
+  }
+}
+@media screen and (max-width: 480px) {
+  .main-banner__text p br {
+    display: none;
   }
 }
 @media screen and (max-width: 1100px) {
@@ -734,7 +753,7 @@ h5, .h5 {
   color: #FFFFFF;
   width: 50%;
   max-width: 613px;
-  margin-right: 40px;
+  margin-right: 28px;
 }
 @media screen and (max-width: 1600px) {
   .acquaintance-left {
@@ -769,6 +788,7 @@ h5, .h5 {
 @media screen and (max-width: 1600px) {
   .acquaintance-right {
     align-items: center;
+    padding-left: 12px;
   }
 }
 .acquaintance-right img {
@@ -953,7 +973,17 @@ h5, .h5 {
   font-weight: 600;
   margin-bottom: 0;
   text-transform: uppercase;
-  width: 950px;
+  width: 80%;
+}
+@media screen and (max-width: 1600px) {
+  .faq__item-title p {
+    width: 60%;
+  }
+}
+@media screen and (max-width: 1000px) {
+  .faq__item-title p {
+    width: 100%;
+  }
 }
 .faq__item-title-btn {
   cursor: pointer;
@@ -968,7 +998,6 @@ h5, .h5 {
   padding-bottom: 30px;
 }
 .faq__item .active {
-  margin-bottom: 30px;
   opacity: 1;
   height: auto;
 }
@@ -1025,27 +1054,28 @@ h5, .h5 {
   justify-content: center;
 }
 .swiper-pagination-bullet {
+  min-width: 67px;
   width: 67px;
   height: 6px;
   border-radius: 3px;
   background: #D1C6DD;
+  opacity: 1;
+  margin: 0 8px !important;
+}
+.swiper-pagination-bullet:not(.swiper-pagination-bullet-active-main) {
   opacity: 0;
 }
 .swiper-pagination-bullet-active {
   background: #BD4CC8;
 }
-.swiper-pagination-bullet-active-prev, .swiper-pagination-bullet-active-prev-prev, .swiper-pagination-bullet-active-next, .swiper-pagination-bullet-active-next-next {
-  opacity: 0;
-}
-.swiper-pagination-bullet-active-prev, .swiper-pagination-bullet-active-next {
-  opacity: 1;
-}
-.swiper-pagination-bullet-active-main {
-  opacity: 1;
-}
 
 .contacts h3 {
   margin-bottom: 60px;
+}
+@media screen and (max-width: 768px) {
+  .contacts h3 {
+    margin-bottom: 40px;
+  }
 }
 .contacts-wrap {
   display: flex;
@@ -1103,12 +1133,12 @@ h5, .h5 {
 .contacts__info-address p {
   margin-left: 12px;
   line-height: 22.5px;
+  font-weight: 500;
 }
 .contacts__info-phone {
   display: flex;
   align-items: center;
   font-weight: 700;
-  margin-left: 1px;
 }
 .contacts__info-phone a {
   margin-left: 10px;
@@ -1121,6 +1151,11 @@ h5, .h5 {
 }
 .feedback h2 {
   color: #FFFFFF;
+}
+@media screen and (max-width: 768px) {
+  .feedback .btn {
+    width: 100%;
+  }
 }
 .feedback-wrap {
   display: flex;
@@ -1189,11 +1224,6 @@ h5, .h5 {
 @media screen and (max-width: 1100px) {
   .footer {
     padding: 60px 40px;
-  }
-}
-@media screen and (max-width: 480px) {
-  .footer {
-    padding: 60px 24px;
   }
 }
 .footer a {
@@ -1327,8 +1357,12 @@ h5, .h5 {
 .footer__info-soc {
   margin-bottom: 20px;
 }
+.footer__info-soc a {
+  display: inline-block;
+  width: 30px;
+}
 .footer__info-soc a:not(:last-child) {
-  margin-right: 20px;
+  margin-right: 16px;
 }
 .footer__info-soc svg path {
   -webkit-transition: 0.2s;

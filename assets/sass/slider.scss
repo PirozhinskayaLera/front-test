@@ -52,31 +52,20 @@
         display: flex;
         justify-content: center;
         &-bullet {
+            min-width: 67px;
             width: 67px;
             height: 6px;
             border-radius: 3px;
             background: $color-grey;
-            opacity: 0;
-            // display: none;
+            opacity: 1;
+            margin: 0 8px !important;
+
+            &:not(.swiper-pagination-bullet-active-main){
+                opacity: 0;
+            }
 
             &-active {
                 background: $color-brightly-violet;
-
-                &-prev, &-prev-prev, &-next, &-next-next  {
-                //    width: 6px;
-                //    display: inline-block;
-                    opacity: 0;
-                }
-
-                &-prev, &-next {
-                    opacity: 1;
-                }
-
-                &-main {
-                    opacity: 1;
-                    // display: inline-block;
-                    // left: 16px !important;
-                }
             }
         }
     }

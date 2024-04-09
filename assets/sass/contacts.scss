@@ -2,6 +2,11 @@
 
     h3 {
         margin-bottom: 60px;
+
+        @media screen and (max-width: 768px)
+        {
+            margin-bottom: 40px;
+        }
     }
 
     &-wrap {
@@ -64,6 +69,7 @@
             p {
                 margin-left: 12px;
                 line-height: 22.5px;
+                font-weight: 500;
             }
         }
 
@@ -71,7 +77,6 @@
             display: flex;
             align-items: center;
             font-weight: 700;
-            margin-left: 1px;
 
             a {
                 margin-left: 10px;

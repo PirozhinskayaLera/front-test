@@ -17,6 +17,13 @@
     }
 
     &__text{
+        p {
+            @media screen and (max-width: 480px) {
+                br {
+                    display: none;
+                }
+            }
+        }
         @media screen and (max-width: 1100px) {
            margin-bottom: 40px;
         }

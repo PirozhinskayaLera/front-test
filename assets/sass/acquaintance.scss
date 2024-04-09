@@ -16,7 +16,7 @@
         color: $color;
         width: 50%;
 	    max-width: 613px;
-        margin-right: 40px;
+        margin-right: 28px;
 
         @media screen and (max-width: 1600px) {
             // min-width: 545px;
@@ -50,6 +50,7 @@
 
         @media screen and (max-width: 1600px) {
             align-items: center;
+            padding-left: 12px;
         }
 
         img {

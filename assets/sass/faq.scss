@@ -23,7 +23,15 @@
                 font-weight: 600;
                 margin-bottom: 0;
                 text-transform: uppercase;
-                width: 950px;
+                width: 80%;
+
+                @media screen and (max-width: 1600px) {
+                    width: 60%;
+                }
+
+                @media screen and (max-width: 1000px) {
+                    width: 100%;
+                }
             }
 
             &-btn {
@@ -43,7 +51,6 @@
         }
 
         .active {
-            margin-bottom: 30px;
             opacity: 1;
             height: auto;
         }  

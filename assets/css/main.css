@@ -144,6 +144,7 @@ a:hover {
   border-color: #D1C6DD;
   outline: none;
   box-shadow: none;
+  border-radius: 0px;
 }
 .btn--violet {
   display: flex;
@@ -186,6 +187,7 @@ a:hover {
   background-color: #D1C6DD;
   outline: none;
   box-shadow: none;
+  border-radius: 0px;
 }
 .btn--white:hover, .btn--white :active {
   color: #BD4CC8;
@@ -449,7 +451,7 @@ h5, .h5 {
 .header__logo img {
   width: auto;
 }
-@media screen and (max-width: 480px) {
+@media screen and (max-width: 768px) {
   .header__logo img {
     height: 23px;
   }
@@ -1152,7 +1154,7 @@ h5, .h5 {
 .feedback h2 {
   color: #FFFFFF;
 }
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 480px) {
   .feedback .btn {
     width: 100%;
   }
@@ -1186,6 +1188,18 @@ h5, .h5 {
 }
 .feedback__text {
   margin-bottom: 40px;
+  width: 39%;
+  line-height: 20.8px;
+}
+@media screen and (max-width: 1600px) {
+  .feedback__text {
+    width: 60%;
+  }
+}
+@media screen and (max-width: 1100px) {
+  .feedback__text {
+    width: 100%;
+  }
 }
 .feedback__agreement {
   display: flex;
@@ -1350,6 +1364,7 @@ h5, .h5 {
 }
 .footer__info-policy a:hover {
   color: #BD4CC8;
+  text-decoration: none;
 }
 .footer__info-cop {
   text-transform: uppercase;
@@ -1395,6 +1410,9 @@ h5, .h5 {
 }
 .modal-feedback h4, .modal-feedback p {
   color: #FFFFFF;
+}
+.modal-feedback p {
+  font-size: 16px;
 }
 .modal-feedback__title {
   margin-bottom: 40px;
@@ -1449,6 +1467,9 @@ h5, .h5 {
   font-weight: 700;
   color: #FFFFFF;
   line-height: 24px;
+}
+.modal-feedback--success .fancybox-close-small {
+  display: none;
 }
 .modal-feedback .btn {
   margin: auto;

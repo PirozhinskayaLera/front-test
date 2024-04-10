@@ -192,43 +192,46 @@ $(document).ready(function($)  {
   
 
       if ($('.contacts__cart')) {
-            ymaps.ready(function () {
-                let icon = {
-                    // Опции.
-                    // Необходимо указать данный тип макета.
-                    iconLayout: 'default#image',
-                    // Своё изображение иконки метки.
-                    iconImageHref: 'assets/img/icons/point.svg',
-                    // Размеры метки.
-                    iconImageSize: [58, 71],
-                    // Смещение левого верхнего угла иконки относительно
-                    // её "ножки" (точки привязки).
-                    iconImageOffset: [-5, -38]
-                }
-                var myMap = new ymaps.Map('map', {
-                        center: [53.429718, 58.990685],
-                        zoom: 17
-                    }, {
-                        searchControlProvider: 'yandex#search'
-                    }),
-                    myPlacemarkMgn = new ymaps.Placemark(myMap.getCenter(), {
-                        hintContent: 'г. Магнитогорск, ул. Строителей, 26',
-                    }, icon),
+        let iconWidth = [58, 71];
+        if ($(window).width() <= 1600) 
+            iconWidth = [38, 48];
+        
+        ymaps.ready(function () {
+            let icon = {
+                // Опции.
+                // Необходимо указать данный тип макета.
+                iconLayout: 'default#image',
+                // Своё изображение иконки метки.
+                iconImageHref: 'assets/img/icons/point.svg',
+                // Размеры метки.
+                iconImageSize: iconWidth,
+                // Смещение левого верхнего угла иконки относительно
+                // её "ножки" (точки привязки).
+                iconImageOffset: [-5, -38]
+            }
+            var myMap = new ymaps.Map('map', {
+                    center: [53.429718, 58.990685],
+                    zoom: 17
+                }, {
+                    searchControlProvider: 'yandex#search'
+                }),
+                myPlacemarkMgn = new ymaps.Placemark(myMap.getCenter(), {
+                    hintContent: 'г. Магнитогорск, ул. Строителей, 26',
+                }, icon),
 
-                    myPlacemarkSpb = new ymaps.Placemark([59.905588, 30.266452], {
-                        hintContent: 'Санкт-Петербург, Бумажная 16к1 оф 432',
-                    }, icon),
+                myPlacemarkSpb = new ymaps.Placemark([59.905588, 30.266452], {
+                    hintContent: 'Санкт-Петербург, Бумажная 16к1 оф 432',
+                }, icon),
 
-                    myPlacemarkChel = new ymaps.Placemark([55.139144, 61.397442], {
-                        hintContent: 'г. Челябинск, ул. Доватора, 9 оф.27',
-                    }, icon);
+                myPlacemarkChel = new ymaps.Placemark([55.139144, 61.397442], {
+                    hintContent: 'г. Челябинск, ул. Доватора, 9 оф.27',
+                }, icon);
 
-                myMap.geoObjects
-                    .add(myPlacemarkMgn)
-                    .add(myPlacemarkSpb)
-                    .add(myPlacemarkChel);
-            });
-      }
-    
+            myMap.geoObjects
+                .add(myPlacemarkMgn)
+                .add(myPlacemarkSpb)
+                .add(myPlacemarkChel);
+        });
+    }
 })
 
